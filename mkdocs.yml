@@ -1,0 +1,53 @@
+# Project information
+site_name: 'Venngage Styleguides'
+site_description: 'A short description of my project'
+site_author: 'Venngage'
+site_url: 'https://my-github-handle.github.io/my-project'
+
+# Repository
+repo_name: 'GitHub'
+repo_url: 'https://github.com/enicol/venngage-styleguide'
+
+# Copyright
+copyright: 'Copyright &copy; 2017 Venngage'
+
+# Documentation and theme
+theme: 'material'
+
+# Options
+extra:
+  palette:
+    primary: 'indigo'
+    accent: 'teal'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+  social:
+    - type: 'github'
+      link: 'https://github.com/Venngage'
+
+# Google Analytics
+google_analytics:
+  - 'UA-XXXXXXXX-X'
+  - 'auto'
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite(guess_lang=false)
+  - footnotes
+  - meta
+  - toc(permalink=false)
+  - pymdownx.critic
+
+# Documentation structure
+pages:
+-  Home: 'index.md'
+-  Javascript:
+    - 'JS Styleguide': 'js/javascript.md'
+    - 'React': 'js/react.md'
+    - 'CSS in Javascript': 'js/css-js.md'
+-  PHP:
+    - 'PHP Styleguide': 'php/php.md'
+- About:
+    - 'License': 'about/license.md'
