@@ -1,8 +1,8 @@
 # Project information
 site_name: 'Venngage Styleguides'
-site_description: 'A short description of my project'
+site_description: 'Venngage's JS &amp; PHP Coding Styleguide'
 site_author: 'Venngage'
-site_url: 'https://my-github-handle.github.io/my-project'
+site_url: 'https://enicol.github.io/venngage-styleguide/'
 
 # Repository
 repo_name: 'GitHub'
