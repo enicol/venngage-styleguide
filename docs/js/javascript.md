@@ -1,40 +1,12 @@
 # Venngage JavaScript Style Guide
------
+
 *Based off of [AirBnB's style guide.](https://github.com/airbnb/javascript)*
 
-
-1. [Types](#types)
-1. [References](#references)
-1. [Objects](#objects)
-1. [Arrays](#arrays)
-1. [Destructuring](#destructuring)
-1. [Strings](#strings)
-1. [Functions](#functions)
-1. [Arrow Functions](#arrow-functions)
-1. [Classes & Constructors](#classes--constructors)
-1. [Modules](#modules)
-1. [Iterators and Generators](#iterators-and-generators)
-1. [Properties](#properties)
-1. [Variables](#variables)
-1. [Hoisting](#hoisting)
-1. [Comparison Operators & Equality](#comparison-operators--equality)
-1. [Blocks](#blocks)
-1. [Comments](#comments)
-1. [Whitespace](#whitespace)
-1. [Commas](#commas)
-1. [Semicolons](#semicolons)
-1. [Type Casting & Coercion](#type-casting--coercion)
-1. [Naming Conventions](#naming-conventions)
-1. [Accessors](#accessors)
-1. [Events](#events)
-1. [ECMAScript 6+ (ES 2015+) Styles](#ecmascript-6-es-2015-styles)
-1. [Testing](#testing)
-1. [Performance](#performance)
-1. [Resources](#resources)
-
+## Table of Contents
 ## Types
 --------
-- [1.1](#types--primitives) **Primitives**: When you access a primitive type you work directly on its value.
+### [1.1 Primitives](#types--primitives)
+When you access a primitive type you work directly on its value.
 
   + `string`
   + `number`
@@ -51,7 +23,8 @@ bar = 9;
 console.log(foo, bar); // => 1, 9
 ```
 
-- [1.2](#types--complex)  **Complex**: When you access a complex type you work on a reference to its value.
+### [1.2 Complex](#types--complex)
+When you access a complex type you work on a reference to its value.
 
   + `object`
   + `array`
@@ -70,7 +43,8 @@ console.log(foo[0], bar[0]); // => 9, 9
 
 ## References
 --------
-- [2.1](#references--prefer-const) Use `const` for all of your references; avoid using `var`. eslint: [`prefer-const`](http://eslint.org/docs/rules/prefer-const.html), [`no-const-assign`](http://eslint.org/docs/rules/no-const-assign.html)
+### [2.1 `const`](#references--prefer-const)
+Use `const` for all of your references; avoid using `var`. eslint: [`prefer-const`](http://eslint.org/docs/rules/prefer-const.html), [`no-const-assign`](http://eslint.org/docs/rules/no-const-assign.html)
 
 !!! tip
     This ensures that you can't reassign your references, which can lead to bugs and difficult to comprehend code.
@@ -85,7 +59,8 @@ const a = 1;
 const b = 2;
 ```
 
-  - [2.2](#references--disallow-var) If you must reassign references, use `let` instead of `var`. eslint: [`no-var`](http://eslint.org/docs/rules/no-var.html) jscs: [`disallowVar`](http://jscs.info/rule/disallowVar)
+### [2.2 `let`](#references--disallow-var)
+If you must reassign references, use `let` instead of `var`. eslint: [`no-var`](http://eslint.org/docs/rules/no-var.html) jscs: [`disallowVar`](http://jscs.info/rule/disallowVar)
 
 > Why? `let` is block-scoped rather than function-scoped like `var`.
 
@@ -103,7 +78,8 @@ count += 1;
 }
 ```
 
-- [2.3](#references--block-scope) Note that both `let` and `const` are block-scoped.
+!!! note
+    Both `let` and `const` are block-scoped.
 
 ```javascript
 // const and let only exist in the blocks they are defined in.
@@ -119,7 +95,8 @@ console.log(b); // ReferenceError
 
 ## Objects
 --------
-- [3.1](#objects--no-new) Use the literal syntax for object creation. eslint: [`no-new-object`](http://eslint.org/docs/rules/no-new-object.html)
+### [3.1 Literal syntax](#objects--no-new)
+Use the literal syntax for object creation. eslint: [`no-new-object`](http://eslint.org/docs/rules/no-new-object.html)
 
 ```javascript
 // bad
@@ -129,7 +106,8 @@ const item = new Object();
 const item = {};
 ```
 
-- [3.2](#es6-computed-properties) Use computed property names when creating objects with dynamic property names.
+### [3.2 Property names](#es6-computed-properties)
+Use computed property names when creating objects with dynamic property names.
 
 > Why? They allow you to define all the properties of an object in one place.
 
@@ -154,7 +132,8 @@ name: 'San Francisco',
 };
 ```
 
-- [3.3](#es6-object-shorthand) Use object method shorthand. eslint: [`object-shorthand`](http://eslint.org/docs/rules/object-shorthand.html) jscs: [`requireEnhancedObjectLiterals`](http://jscs.info/rule/requireEnhancedObjectLiterals)
+### [3.3 Object method shorthand](#es6-object-shorthand)
+Use object method shorthand. eslint: [`object-shorthand`](http://eslint.org/docs/rules/object-shorthand.html) jscs: [`requireEnhancedObjectLiterals`](http://jscs.info/rule/requireEnhancedObjectLiterals)
 
 ```javascript
 // bad
@@ -176,7 +155,8 @@ addValue(value) {
 };
 ```
 
-- [3.4](#es6-object-concise) Use property value shorthand. eslint: [`object-shorthand`](http://eslint.org/docs/rules/object-shorthand.html) jscs: [`requireEnhancedObjectLiterals`](http://jscs.info/rule/requireEnhancedObjectLiterals)
+### [3.4 Property value shorthand](#es6-object-concise)
+Use property value shorthand. eslint: [`object-shorthand`](http://eslint.org/docs/rules/object-shorthand.html) jscs: [`requireEnhancedObjectLiterals`](http://jscs.info/rule/requireEnhancedObjectLiterals)
 
 > Why? It is shorter to write and descriptive.
 
@@ -194,7 +174,8 @@ lukeSkywalker,
 };
 ```
 
-- [3.5](#objects--grouped-shorthand) Group your shorthand properties at the beginning of your object declaration.
+### [3.5 shorthand properties](#objects--grouped-shorthand)
+Group your shorthand properties at the beginning of your object declaration.
 
 > Why? It's easier to tell which properties are using the shorthand.
 
@@ -204,46 +185,48 @@ const lukeSkywalker = 'Luke Skywalker';
 
 // bad
 const obj = {
-episodeOne: 1,
-twoJediWalkIntoACantina: 2,
-lukeSkywalker,
-episodeThree: 3,
-mayTheFourth: 4,
-anakinSkywalker,
+  episodeOne: 1,
+  twoJediWalkIntoACantina: 2,
+  lukeSkywalker,
+  episodeThree: 3,
+  mayTheFourth: 4,
+  anakinSkywalker,
 };
 
 // good
 const obj = {
-lukeSkywalker,
-anakinSkywalker,
-episodeOne: 1,
-twoJediWalkIntoACantina: 2,
-episodeThree: 3,
-mayTheFourth: 4,
+  lukeSkywalker,
+  anakinSkywalker,
+  episodeOne: 1,
+  twoJediWalkIntoACantina: 2,
+  episodeThree: 3,
+  mayTheFourth: 4,
 };
 ```
 
-- [3.6](#objects--quoted-props) Only quote properties that are invalid identifiers. eslint: [`quote-props`](http://eslint.org/docs/rules/quote-props.html) jscs: [`disallowQuotedKeysInObjects`](http://jscs.info/rule/disallowQuotedKeysInObjects)
+### [3.6 Quoted properties](#objects--quoted-props)
+Only quote properties that are invalid identifiers. eslint: [`quote-props`](http://eslint.org/docs/rules/quote-props.html) jscs: [`disallowQuotedKeysInObjects`](http://jscs.info/rule/disallowQuotedKeysInObjects)
 
 > Why? In general we consider it subjectively easier to read. It improves syntax highlighting, and is also more easily optimized by many JS engines.
 
 ```javascript
 // bad
 const bad = {
-'foo': 3,
-'bar': 4,
-'data-blah': 5,
+  'foo': 3,
+  'bar': 4,
+  'data-blah': 5,
 };
 
 // good
 const good = {
-foo: 3,
-bar: 4,
-'data-blah': 5,
+  foo: 3,
+  bar: 4,
+  'data-blah': 5,
 };
 ```
 
-- [3.7](#objects--prototype-builtins) Do not call `Object.prototype` methods directly, such as `hasOwnProperty`, `propertyIsEnumerable`, and `isPrototypeOf`.
+### [3.7 `Object.prototype`](#objects--prototype-builtins)
+Do not call `Object.prototype` methods directly, such as `hasOwnProperty`, `propertyIsEnumerable`, and `isPrototypeOf`.
 
 > Why? These methods may be shadowed by properties on the object in question - consider `{ hasOwnProperty: false }` - or, the object may be a null object (`Object.create(null)`).
 
@@ -262,7 +245,8 @@ import has from 'has';
 console.log(has.call(object, key));
 ```
 
-- [3.8](#objects--rest-spread) Prefer the object spread operator over [`Object.assign`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) to shallow-copy objects. Use the object rest operator to get a new object with certain properties omitted.
+### [3.8](#objects--rest-spread)
+Prefer the object spread operator over [`Object.assign`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) to shallow-copy objects. Use the object rest operator to get a new object with certain properties omitted.
 
 ```javascript
 // very bad
@@ -286,7 +270,8 @@ const { a, ...noA } = copy; // noA => { b: 2, c: 3 }
 
 ## Arrays
 --------
-- [4.1](#arrays--literals) Use the literal syntax for array creation. eslint: [`no-array-constructor`](http://eslint.org/docs/rules/no-array-constructor.html)
+### [4.1](#arrays--literals)
+Use the literal syntax for array creation. eslint: [`no-array-constructor`](http://eslint.org/docs/rules/no-array-constructor.html)
 
 ```javascript
 // bad
@@ -296,7 +281,8 @@ const items = new Array();
 const items = [];
 ```
 
-- [4.2](#arrays--push) Use [Array#push](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/push) instead of direct assignment to add items to an array.
+### [4.2 Push](#arrays--push)
+Use [Array#push](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/push) instead of direct assignment to add items to an array.
 
 ```javascript
 const someStack = [];
@@ -308,7 +294,8 @@ someStack[someStack.length] = 'abracadabra';
 someStack.push('abracadabra');
 ```
 
-- [4.3](#es6-array-spreads) Use array spreads `...` to copy arrays.
+### [4.3 Spreads](#es6-array-spreads)
+Use array spreads `...` to copy arrays.
 
 ```javascript
 // bad

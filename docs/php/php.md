@@ -1,3 +1,0 @@
-# Venngage PHP Style Guide
-
-**

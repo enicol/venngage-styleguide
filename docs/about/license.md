@@ -1,4 +1,7 @@
 
+>Unless stated otherwise, all content is licensed under the Creative Commons
+Attribution License and code licensed under the MIT License.
+
 (The MIT License)
 
 Copyright (c) 2014-2017 Airbnb

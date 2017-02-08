@@ -1,6 +1,6 @@
 # Project information
-site_name: 'Venngage Styleguides'
-site_description: 'Venngage's JS and PHP Coding Styleguide'
+site_name: 'Venngage'
+site_description: 'Venngage JS and PHP Coding Styleguide'
 site_author: 'Venngage'
 site_url: 'https://enicol.github.io/venngage-styleguide/'
 
@@ -16,6 +16,7 @@ theme: 'material'
 
 # Options
 extra:
+  logo: 'images/venngage-logo.svg'
   palette:
     primary: 'indigo'
     accent: 'teal'
@@ -25,6 +26,10 @@ extra:
   social:
     - type: 'github'
       link: 'https://github.com/Venngage'
+    - type: 'twitter'
+      link: 'https://twitter.com/Venngage'
+    - type: 'linkedin'
+      link: 'https://www.linkedin.com/company/venngage'
 
 # Google Analytics
 google_analytics:
@@ -37,17 +42,21 @@ markdown_extensions:
   - codehilite(guess_lang=false)
   - footnotes
   - meta
-  - toc(permalink=false)
+  - toc(permalink=true)
   - pymdownx.critic
 
 # Documentation structure
-pages:
+pages: 
 -  Home: 'index.md'
 -  Javascript:
-    - 'JS Styleguide': 'js/javascript.md'
-    - 'React': 'js/react.md'
+    - 'Basic Coding Standard': 'js/javascript.md'
+    - 'React Styleguide': 'js/react.md'
     - 'CSS in Javascript': 'js/css-js.md'
 -  PHP:
-    - 'PHP Styleguide': 'php/php.md'
-- About:
-    - 'License': 'about/license.md'
+    - 'Basic Coding Standard': 'php/php-standard.md'
+    - 'Coding Styleguide': 'php/php-styleguide.md'
+    - 'Logger Interface': 'php/php-interface.md'
+    - 'Autoloader': 'php/php-autoloader.md'
+    - 'Cache': 'php/php-cache.md'
+    - 'HTTP Messages': 'php/php-http-messages.md'
+- Licenses: 'about/license.md'
