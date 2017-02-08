@@ -3,6 +3,7 @@ site_name: 'Venngage'
 site_description: 'Venngage JS and PHP Coding Styleguide'
 site_author: 'Venngage'
 site_url: 'https://enicol.github.io/venngage-styleguide/'
+site_favicon: 'images/favicon.ico'
 
 # Repository
 repo_name: 'GitHub'
@@ -17,7 +18,6 @@ theme: 'material'
 # Options
 extra:
   logo: 'images/venngage-logo.svg'
-  site_favicon: 'images/favicon.ico'
   palette:
     primary: 'indigo'
     accent: 'teal'
