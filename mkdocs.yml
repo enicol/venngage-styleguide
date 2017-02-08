@@ -17,6 +17,7 @@ theme: 'material'
 # Options
 extra:
   logo: 'images/venngage-logo.svg'
+  site_favicon: 'images/favicon.ico'
   palette:
     primary: 'indigo'
     accent: 'teal'
@@ -46,7 +47,7 @@ markdown_extensions:
   - pymdownx.critic
 
 # Documentation structure
-pages: 
+pages:
 -  Home: 'index.md'
 -  Javascript:
     - 'Basic Coding Standard': 'js/javascript.md'
