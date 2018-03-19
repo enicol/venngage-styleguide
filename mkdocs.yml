@@ -10,7 +10,7 @@ repo_name: 'GitHub'
 repo_url: 'https://github.com/enicol/venngage-styleguide'
 
 # Copyright
-copyright: 'Copyright &copy; 2017 Venngage'
+copyright: 'Copyright &copy; 2018 Venngage'
 
 # Documentation and theme
 theme: 'material'
@@ -49,6 +49,10 @@ markdown_extensions:
 # Documentation structure
 pages:
 -  Home: 'index.md'
+-  Internationalization:
+    - 'Introduction': 'i18n/introduction.md'
+    - 'i18n with Javascript': 'i18n/javascript.md'
+    - 'i18n with PHP': 'i18n/php.md'
 -  Javascript:
     - 'Basic Coding Standard': 'js/javascript.md'
     - 'React Styleguide': 'js/react.md'
