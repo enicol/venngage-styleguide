@@ -3,16 +3,20 @@
 *Based off of [AirBnB's style guide.](https://github.com/airbnb/javascript)*
 
 ## Table of Contents
+
 ## Types
+
 --------
+
 ### [1.1 Primitives](#types--primitives)
+
 When you access a primitive type you work directly on its value.
 
-  + `string`
-  + `number`
-  + `boolean`
-  + `null`
-  + `undefined`
++ `string`
++ `number`
++ `boolean`
++ `null`
++ `undefined`
 
 ```javascript
 const foo = 1;
@@ -24,11 +28,12 @@ console.log(foo, bar); // => 1, 9
 ```
 
 ### [1.2 Complex](#types--complex)
+
 When you access a complex type you work on a reference to its value.
 
-  + `object`
-  + `array`
-  + `function`
++ `object`
++ `array`
++ `function`
 
 ```javascript
 const foo = [1, 2];
@@ -42,8 +47,11 @@ console.log(foo[0], bar[0]); // => 9, 9
 **[⬆ back to top](#table-of-contents)**
 
 ## References
+
 --------
+
 ### [2.1 `const`](#references--prefer-const)
+
 Use `const` for all of your references; avoid using `var`. eslint: [`prefer-const`](http://eslint.org/docs/rules/prefer-const.html), [`no-const-assign`](http://eslint.org/docs/rules/no-const-assign.html)
 
 !!! tip
@@ -60,6 +68,7 @@ const b = 2;
 ```
 
 ### [2.2 `let`](#references--disallow-var)
+
 If you must reassign references, use `let` instead of `var`. eslint: [`no-var`](http://eslint.org/docs/rules/no-var.html) jscs: [`disallowVar`](http://jscs.info/rule/disallowVar)
 
 > Why? `let` is block-scoped rather than function-scoped like `var`.
@@ -94,8 +103,11 @@ console.log(b); // ReferenceError
 **[⬆ back to top](#table-of-contents)**
 
 ## Objects
+
 --------
+
 ### [3.1 Literal syntax](#objects--no-new)
+
 Use the literal syntax for object creation. eslint: [`no-new-object`](http://eslint.org/docs/rules/no-new-object.html)
 
 ```javascript
@@ -107,6 +119,7 @@ const item = {};
 ```
 
 ### [3.2 Property names](#es6-computed-properties)
+
 Use computed property names when creating objects with dynamic property names.
 
 > Why? They allow you to define all the properties of an object in one place.
@@ -133,6 +146,7 @@ name: 'San Francisco',
 ```
 
 ### [3.3 Object method shorthand](#es6-object-shorthand)
+
 Use object method shorthand. eslint: [`object-shorthand`](http://eslint.org/docs/rules/object-shorthand.html) jscs: [`requireEnhancedObjectLiterals`](http://jscs.info/rule/requireEnhancedObjectLiterals)
 
 ```javascript
@@ -156,6 +170,7 @@ addValue(value) {
 ```
 
 ### [3.4 Property value shorthand](#es6-object-concise)
+
 Use property value shorthand. eslint: [`object-shorthand`](http://eslint.org/docs/rules/object-shorthand.html) jscs: [`requireEnhancedObjectLiterals`](http://jscs.info/rule/requireEnhancedObjectLiterals)
 
 > Why? It is shorter to write and descriptive.
@@ -175,6 +190,7 @@ lukeSkywalker,
 ```
 
 ### [3.5 shorthand properties](#objects--grouped-shorthand)
+
 Group your shorthand properties at the beginning of your object declaration.
 
 > Why? It's easier to tell which properties are using the shorthand.
@@ -205,6 +221,7 @@ const obj = {
 ```
 
 ### [3.6 Quoted properties](#objects--quoted-props)
+
 Only quote properties that are invalid identifiers. eslint: [`quote-props`](http://eslint.org/docs/rules/quote-props.html) jscs: [`disallowQuotedKeysInObjects`](http://jscs.info/rule/disallowQuotedKeysInObjects)
 
 > Why? In general we consider it subjectively easier to read. It improves syntax highlighting, and is also more easily optimized by many JS engines.
@@ -226,6 +243,7 @@ const good = {
 ```
 
 ### [3.7 `Object.prototype`](#objects--prototype-builtins)
+
 Do not call `Object.prototype` methods directly, such as `hasOwnProperty`, `propertyIsEnumerable`, and `isPrototypeOf`.
 
 > Why? These methods may be shadowed by properties on the object in question - consider `{ hasOwnProperty: false }` - or, the object may be a null object (`Object.create(null)`).
@@ -246,6 +264,7 @@ console.log(has.call(object, key));
 ```
 
 ### [3.8](#objects--rest-spread)
+
 Prefer the object spread operator over [`Object.assign`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) to shallow-copy objects. Use the object rest operator to get a new object with certain properties omitted.
 
 ```javascript
@@ -267,10 +286,12 @@ const { a, ...noA } = copy; // noA => { b: 2, c: 3 }
 
 **[⬆ back to top](#table-of-contents)**
 
-
 ## Arrays
+
 --------
+
 ### [4.1](#arrays--literals)
+
 Use the literal syntax for array creation. eslint: [`no-array-constructor`](http://eslint.org/docs/rules/no-array-constructor.html)
 
 ```javascript
@@ -282,6 +303,7 @@ const items = [];
 ```
 
 ### [4.2 Push](#arrays--push)
+
 Use [Array#push](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/push) instead of direct assignment to add items to an array.
 
 ```javascript
@@ -295,6 +317,7 @@ someStack.push('abracadabra');
 ```
 
 ### [4.3 Spreads](#es6-array-spreads)
+
 Use array spreads `...` to copy arrays.
 
 ```javascript
@@ -311,7 +334,9 @@ itemsCopy[i] = items[i];
 const itemsCopy = [...items];
 ```
 
-- [4.4](#arrays--from) To convert an array-like object to an array, use [Array.from](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
+### [4.4](#arrays--from)
+
+ To convert an array-like object to an array, use [Array.from](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
 
 ```javascript
 const foo = document.querySelectorAll('.foo');
@@ -369,8 +394,10 @@ inbox.filter((msg) => {
 **[⬆ back to top](#table-of-contents)**
 
 ## Destructuring
+
 --------
-- [5.1](#destructuring--object) Use object destructuring when accessing and using multiple properties of an object. jscs: [`requireObjectDestructuring`](http://jscs.info/rule/requireObjectDestructuring)
+
+ [5.1](#destructuring--object) Use object destructuring when accessing and using multiple properties of an object. jscs: [`requireObjectDestructuring`](http://jscs.info/rule/requireObjectDestructuring)
 
 > Why? Destructuring saves you from creating temporary references for those properties.
 
@@ -395,7 +422,7 @@ function getFullName({ firstName, lastName }) {
 }
 ```
 
-- [5.2](#destructuring--array) Use array destructuring. jscs: [`requireArrayDestructuring`](http://jscs.info/rule/requireArrayDestructuring)
++ [5.2](#destructuring--array) Use array destructuring. jscs: [`requireArrayDestructuring`](http://jscs.info/rule/requireArrayDestructuring)
 
 ```javascript
 const arr = [1, 2, 3, 4];
@@ -408,7 +435,7 @@ const second = arr[1];
 const [first, second] = arr;
 ```
 
-- [5.3](#destructuring--object-over-array) Use object destructuring for multiple return values, not array destructuring. jscs: [`disallowArrayDestructuringReturn`](http://jscs.info/rule/disallowArrayDestructuringReturn)
++ [5.3](#destructuring--object-over-array) Use object destructuring for multiple return values, not array destructuring. jscs: [`disallowArrayDestructuringReturn`](http://jscs.info/rule/disallowArrayDestructuringReturn)
 
 > Why? You can add new properties over time or change the order of things without breaking call sites.
 
@@ -432,12 +459,13 @@ function processInput(input) {
 const { left, top } = processInput(input);
 ```
 
-
 **[⬆ back to top](#table-of-contents)**
 
 ## Strings
+
 --------
-- [6.1](#strings--quotes) Use single quotes `''` for strings. eslint: [`quotes`](http://eslint.org/docs/rules/quotes.html) jscs: [`validateQuoteMarks`](http://jscs.info/rule/validateQuoteMarks)
+
++ [6.1](#strings--quotes) Use single quotes `''` for strings. eslint: [`quotes`](http://eslint.org/docs/rules/quotes.html) jscs: [`validateQuoteMarks`](http://jscs.info/rule/validateQuoteMarks)
 
 ```javascript
 // bad
@@ -450,7 +478,7 @@ const name = `Capt. Janeway`;
 const name = 'Capt. Janeway';
 ```
 
-- [6.2](#strings--line-length) Strings that cause the line to go over 100 characters should not be written across multiple lines using string concatenation.
++ [6.2](#strings--line-length) Strings that cause the line to go over 100 characters should not be written across multiple lines using string concatenation.
 
 > Why? Broken strings are painful to work with and make code less searchable.
 
@@ -470,7 +498,7 @@ const errorMessage = 'This is a super long error that was thrown because ' +
 const errorMessage = 'This is a super long error that was thrown because of Batman. When you stop to think about how Batman had anything to do with this, you would get nowhere fast.';
 ```
 
-- [6.3](#es6-template-literals) When programmatically building up strings, use template strings instead of concatenation. eslint: [`prefer-template`](http://eslint.org/docs/rules/prefer-template.html) [`template-curly-spacing`](http://eslint.org/docs/rules/template-curly-spacing) jscs: [`requireTemplateStrings`](http://jscs.info/rule/requireTemplateStrings)
++ [6.3](#es6-template-literals) When programmatically building up strings, use template strings instead of concatenation. eslint: [`prefer-template`](http://eslint.org/docs/rules/prefer-template.html) [`template-curly-spacing`](http://eslint.org/docs/rules/template-curly-spacing) jscs: [`requireTemplateStrings`](http://jscs.info/rule/requireTemplateStrings)
 
 > Why? Template strings give you a readable, concise syntax with proper newlines and string interpolation features.
 
@@ -496,9 +524,9 @@ function sayHi(name) {
 }
 ```
 
-- [6.4](#strings--eval) Never use `eval()` on a string, it opens too many vulnerabilities.
++ [6.4](#strings--eval) Never use `eval()` on a string, it opens too many vulnerabilities.
 
-- [6.5](#strings--escaping) Do not unnecessarily escape characters in strings. eslint: [`no-useless-escape`](http://eslint.org/docs/rules/no-useless-escape)
++ [6.5](#strings--escaping) Do not unnecessarily escape characters in strings. eslint: [`no-useless-escape`](http://eslint.org/docs/rules/no-useless-escape)
 
 > Why? Backslashes harm readability, thus they should only be present when necessary.
 
@@ -513,10 +541,11 @@ const foo = `my name is '${name}'`;
 
 **[⬆ back to top](#table-of-contents)**
 
-
 ## Functions
+
 --------
-- [7.1](#functions--declarations) Use named function expressions instead of function declarations. eslint: [`func-style`](http://eslint.org/docs/rules/func-style) jscs: [`disallowFunctionDeclarations`](http://jscs.info/rule/disallowFunctionDeclarations)
+
++ [7.1](#functions--declarations) Use named function expressions instead of function declarations. eslint: [`func-style`](http://eslint.org/docs/rules/func-style) jscs: [`disallowFunctionDeclarations`](http://jscs.info/rule/disallowFunctionDeclarations)
 
 > Why? Function declarations are hoisted, which means that it’s easy - too easy - to reference the function before it is defined in the file. This harms readability and maintainability. If you find that a function’s definition is large or complex enough that it is interfering with understanding the rest of the file, then perhaps it’s time to extract it to its own module! Don’t forget to name the expression - anonymous functions can make it harder to locate the problem in an Error's call stack. ([Discussion](https://github.com/airbnb/javascript/issues/794))
 
@@ -537,7 +566,7 @@ const foo = function bar() {
 };
 ```
 
-- [7.2](#functions--iife) Wrap immediately invoked function expressions in parentheses. eslint: [`wrap-iife`](http://eslint.org/docs/rules/wrap-iife.html) jscs: [`requireParenthesesAroundIIFE`](http://jscs.info/rule/requireParenthesesAroundIIFE)
++ [7.2](#functions--iife) Wrap immediately invoked function expressions in parentheses. eslint: [`wrap-iife`](http://eslint.org/docs/rules/wrap-iife.html) jscs: [`requireParenthesesAroundIIFE`](http://jscs.info/rule/requireParenthesesAroundIIFE)
 
 > Why? An immediately invoked function expression is a single unit - wrapping both it, and its invocation parens, in parens, cleanly expresses this. Note that in a world with modules everywhere, you almost never need an IIFE.
 
@@ -550,7 +579,7 @@ const foo = function bar() {
 
 - [7.3](#functions--in-blocks) Never declare a function in a non-function block (if, while, etc). Assign the function to a variable instead. Browsers will allow you to do it, but they all interpret it differently, which is bad news bears. eslint: [`no-loop-func`](http://eslint.org/docs/rules/no-loop-func.html)
 
-- [7.4](#functions--note-on-blocks) **Note:** ECMA-262 defines a `block` as a list of statements. A function declaration is not a statement. [Read ECMA-262's note on this issue](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf#page=97).
++ [7.4](#functions--note-on-blocks) **Note:** ECMA-262 defines a `block` as a list of statements. A function declaration is not a statement. [Read ECMA-262's note on this issue](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf#page=97).
 
 ```javascript
 // bad
@@ -569,7 +598,7 @@ if (currentUser) {
 }
 ```
 
-- [7.5](#functions--arguments-shadow) Never name a parameter `arguments`. This will take precedence over the `arguments` object that is given to every function scope.
++ [7.5](#functions--arguments-shadow) Never name a parameter `arguments`. This will take precedence over the `arguments` object that is given to every function scope.
 
 ```javascript
 // bad
@@ -583,7 +612,7 @@ function foo(name, options, args) {
 }
 ```
 
-- [7.6](#es6-rest) Never use `arguments`, opt to use rest syntax `...` instead. eslint: [`prefer-rest-params`](http://eslint.org/docs/rules/prefer-rest-params)
++ [7.6](#es6-rest) Never use `arguments`, opt to use rest syntax `...` instead. eslint: [`prefer-rest-params`](http://eslint.org/docs/rules/prefer-rest-params)
 
 > Why? `...` is explicit about which arguments you want pulled. Plus, rest arguments are a real Array, and not merely Array-like like `arguments`.
 
