@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
 
-        <meta name="description" content="Venngage JS and PHP Coding Styleguide">
+        <meta name="description" content="Venngage Developer Documentation and Coding Styleguide">
 
 
         <link rel="canonical" href="https://enicol.github.io/venngage-styleguide/js/javascript/">
@@ -197,13 +197,67 @@
 
   <li class="md-nav__item md-nav__item--nested">
 
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
 
     <label class="md-nav__link" for="nav-2">
-      Javascript
+      Internationalization
     </label>
     <nav class="md-nav" data-md-component="collapsible">
       <label class="md-nav__title" for="nav-2">
+        Internationalization
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../../i18n/introduction/" title="Introduction" class="md-nav__link">
+        Introduction
+      </a>
+
+  </li>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../../i18n/javascript/" title="i18n with Javascript" class="md-nav__link">
+        i18n with Javascript
+      </a>
+
+  </li>
+
+
+
+
+  <li class="md-nav__item">
+
+      <a href="../../i18n/php/" title="i18n with PHP" class="md-nav__link">
+        i18n with PHP
+      </a>
+
+  </li>
+
+
+      </ul>
+    </nav>
+  </li>
+
+
+
+
+  <li class="md-nav__item md-nav__item--nested">
+
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+
+    <label class="md-nav__link" for="nav-3">
+      Javascript
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-3">
         Javascript
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -391,6 +445,13 @@
           <li class="md-nav__item">
   <a href="#43-spreads" title="4.3 Spreads" class="md-nav__link">
     4.3 Spreads
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#44" title="4.4" class="md-nav__link">
+    4.4
   </a>
 
 </li>
@@ -606,13 +667,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
 
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
 
-    <label class="md-nav__link" for="nav-3">
+    <label class="md-nav__link" for="nav-4">
       PHP
     </label>
     <nav class="md-nav" data-md-component="collapsible">
-      <label class="md-nav__title" for="nav-3">
+      <label class="md-nav__title" for="nav-4">
         PHP
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -875,6 +936,13 @@
           <li class="md-nav__item">
   <a href="#43-spreads" title="4.3 Spreads" class="md-nav__link">
     4.3 Spreads
+  </a>
+
+</li>
+
+          <li class="md-nav__item">
+  <a href="#44" title="4.4" class="md-nav__link">
+    4.4
   </a>
 
 </li>
@@ -1368,9 +1436,8 @@
 </pre></div>
 
 
-<ul>
-<li><a href="#arrays--from">4.4</a> To convert an array-like object to an array, use <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/from">Array.from</a>.</li>
-</ul>
+<h3 id="44"><a href="#arrays--from">4.4</a><a class="headerlink" href="#44" title="Permanent link">&para;</a></h3>
+<p>To convert an array-like object to an array, use <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/from">Array.from</a>.</p>
 <div class="codehilite"><pre><span></span><span class="kr">const</span> <span class="nx">foo</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;.foo&#39;</span><span class="p">);</span>
 <span class="kr">const</span> <span class="nx">nodes</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">from</span><span class="p">(</span><span class="nx">foo</span><span class="p">);</span>
 </pre></div>
@@ -1428,9 +1495,7 @@
 <p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
 <h2 id="destructuring">Destructuring<a class="headerlink" href="#destructuring" title="Permanent link">&para;</a></h2>
 <hr />
-<ul>
-<li><a href="#destructuring--object">5.1</a> Use object destructuring when accessing and using multiple properties of an object. jscs: <a href="http://jscs.info/rule/requireObjectDestructuring"><code>requireObjectDestructuring</code></a></li>
-</ul>
+<p><a href="#destructuring--object">5.1</a> Use object destructuring when accessing and using multiple properties of an object. jscs: <a href="http://jscs.info/rule/requireObjectDestructuring"><code>requireObjectDestructuring</code></a></p>
 <blockquote>
 <p>Why? Destructuring saves you from creating temporary references for those properties.</p>
 </blockquote>
@@ -4106,7 +4171,7 @@ const hero = {
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
 
-          <a href="../.." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../i18n/php/" title="i18n with PHP" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -4115,7 +4180,7 @@ const hero = {
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Home
+                i18n with PHP
               </span>
             </div>
           </a>
@@ -4143,7 +4208,7 @@ const hero = {
       <div class="md-footer-copyright">
 
           <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2017 Venngage
+            Copyright &copy; 2018 Venngage
           </div>
 
         powered by
