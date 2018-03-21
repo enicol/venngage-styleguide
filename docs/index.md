@@ -1,4 +1,4 @@
-# Venngage Coding Guidelines
+# Venngage Developer Documentation
 
 -----
 
@@ -15,4 +15,5 @@
     1. [Autoloader](php/php-autoloader)
     1. [Cache](php/php-cache)
     1. [HTTP Messages](php/php-http-messages)
-4. [Licenses](about/license)
+4. [Dev Support](support/dev-support)
+5. [Licenses](about/license)
