@@ -1,6 +1,6 @@
 # Project information
 site_name: 'Venngage'
-site_description: 'Venngage JS and PHP Coding Styleguide'
+site_description: 'Venngage Developer Documentation and Coding Styleguide'
 site_author: 'Venngage'
 site_url: 'https://enicol.github.io/venngage-styleguide/'
 site_favicon: 'images/favicon.ico'
@@ -64,4 +64,5 @@ pages:
     - 'Autoloader': 'php/php-autoloader.md'
     - 'Cache': 'php/php-cache.md'
     - 'HTTP Messages': 'php/php-http-messages.md'
+-  Dev Support: 'support/dev-support.md'
 - Licenses: 'about/license.md'
