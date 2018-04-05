@@ -259,8 +259,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
 
         <li class="md-nav__item">
-  <a href="#1-adding-translations" title="1 Adding translations" class="md-nav__link">
-    1 Adding translations
+  <a href="#1-adding-translations" title="1. Adding translations" class="md-nav__link">
+    1. Adding translations
   </a>
 
 </li>
@@ -475,8 +475,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
 
         <li class="md-nav__item">
-  <a href="#1-adding-translations" title="1 Adding translations" class="md-nav__link">
-    1 Adding translations
+  <a href="#1-adding-translations" title="1. Adding translations" class="md-nav__link">
+    1. Adding translations
   </a>
 
 </li>
@@ -512,7 +512,7 @@
 
                 <h1 id="internationalization-with-php">Internationalization with PHP<a class="headerlink" href="#internationalization-with-php" title="Permanent link">&para;</a></h1>
 <p>This section explains how to implement translations within PHP files, and assumes you have read the <em><a href="../../i18n/introduction">Introduction</a></em> from an earlier section.</p>
-<h2 id="1-adding-translations"><a href="#adding-translations">1 Adding translations</a><a class="headerlink" href="#1-adding-translations" title="Permanent link">&para;</a></h2>
+<h2 id="1-adding-translations"><a href="#adding-translations">1. Adding translations</a><a class="headerlink" href="#1-adding-translations" title="Permanent link">&para;</a></h2>
 <p>Adding internationalization support for PHP files relatively straightforward. First you must add the translated strings to the <code>messages.po</code> found in the same directory that matches the locale you are adding support for:</p>
 <blockquote>
 <p>i.e. Spanish translations are added to the <code>messages.po</code> within <code>/locale/es/LC_MESSAGES/</code></p>
@@ -547,8 +547,8 @@ docker <span class="nb">exec</span> docker_php-fpm_1 bash service php5.6-fpm res
 
 
 <h2 id="3-adding-locale-support"><a href="#locale-support">3. Adding Locale Support</a><a class="headerlink" href="#3-adding-locale-support" title="Permanent link">&para;</a></h2>
-<p>If the translation changes you made aren't showing up on your local, first check that your browser is set to the langauge you are adding support for. If you have followed all of the preceding steps and your changes are still not rendering, check to make sure you have the locale support installed for the specific locale you're working with.</p>
-<p>You can check which locales you have installed by going into the <code>php-fpm</code> conatiner</p>
+<p>If the translation changes you made aren't showing up on your local, first check that your browser is set to the language you are adding support for. If you have followed all of the preceding steps and your changes are still not rendering, check to make sure you have the locale support installed for the specific locale you're working with.</p>
+<p>You can check which locales you have installed by going into the <code>php-fpm</code> container</p>
 <div class="codehilite"><pre><span></span><span class="nb">cd</span> docker <span class="o">&amp;&amp;</span> <span class="se">\</span>
 docker-compose <span class="nb">exec</span> php-fpm bash
 </pre></div>

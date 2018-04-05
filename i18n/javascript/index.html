@@ -229,6 +229,10 @@
 
 
 
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        i18n with Javascript
+      </label>
+
     <a href="./" title="i18n with Javascript" class="md-nav__link md-nav__link--active">
       i18n with Javascript
     </a>
@@ -239,6 +243,25 @@
 
 
 
+
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+
+        <li class="md-nav__item">
+  <a href="#adding-translations" title="Adding Translations" class="md-nav__link">
+    Adding Translations
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#using-polyglot" title="Using Polyglot" class="md-nav__link">
+    Using Polyglot
+  </a>
+
+</li>
+
+    </ul>
 
 </nav>
 
@@ -441,6 +464,25 @@
 
 
 
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+
+        <li class="md-nav__item">
+  <a href="#adding-translations" title="Adding Translations" class="md-nav__link">
+    Adding Translations
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
+  <a href="#using-polyglot" title="Using Polyglot" class="md-nav__link">
+    Using Polyglot
+  </a>
+
+</li>
+
+    </ul>
+
 </nav>
                   </div>
                 </div>
@@ -454,8 +496,60 @@
 
 
 
-                <h1 id="internationalization-with-javscript">Internationalization with Javscript<a class="headerlink" href="#internationalization-with-javscript" title="Permanent link">&para;</a></h1>
-<p>As mentioned in the <em><a href="../../i18n/introduction">Introduction</a></em> this part of the guide assumes you have already translated strings from English into the language you are adding support for, and that the files that contain those translations is written in Javascript.</p>
+                <h1 id="internationalization-with-javascript">Internationalization with Javascript<a class="headerlink" href="#internationalization-with-javascript" title="Permanent link">&para;</a></h1>
+<p>As mentioned in the <em><a href="../../i18n/introduction">Introduction</a></em> this part of the guide assumes you have already translated strings from English into the language you are adding support for, and that the destination files for those translations are written in Javascript.</p>
+<p>We use <a href="http://airbnb.io/polyglot.js/#interpolation" target="_blank">Airbnb's Polyglot library</a> to handle all frontend translations. Please refer to their documentation for implementation examples.</p>
+<h2 id="adding-translations"><a href="#adding-translations">Adding Translations</a><a class="headerlink" href="#adding-translations" title="Permanent link">&para;</a></h2>
+<p>All translation files for this type of internationalization can be found in one of two locations:</p>
+<ol>
+<li>
+<p><code>html/app/src/translation/</code></p>
+</li>
+<li>
+<p><code>html/editor/src/translation/</code></p>
+</li>
+</ol>
+<p>Within those folders, you will find <code>main.js</code> which contains polyglot config and the <code>locales/</code> directory which contains all the translations for specific locales. It is in this folder that you will add any new translations.</p>
+<p>Below you can see a sample of the file structure from <code>es.js</code>. Here we have nested objects of key/value pairs that are labeled according to the parts of the app they relate to. The example below is from the onboarding survey.</p>
+<div class="codehilite"><pre><span></span>survey: <span class="o">{</span>
+    welcome: <span class="s2">&quot;¡Bienvenidos a Venngage %{name}!&quot;</span>,
+    recommend: <span class="s2">&quot;Nos gustaría recomendarte algunos diseños, solo para tí&quot;</span>,
+    personalize: <span class="s2">&quot;Vamos a personalizar tu página, %{name}!&quot;</span>,
+    q1: <span class="s2">&quot;¿En qué tipo de organización trabajas?&quot;</span>,
+    q1_opt: <span class="o">{</span>
+        self_employed: <span class="s2">&quot;Trabaja por su cuenta&lt;br&gt;&lt;br&gt;&quot;</span>,
+        sm_business: <span class="s2">&quot;Negocio Pequeño&lt;br&gt;(&lt;50)&quot;</span>,
+        md_business: <span class="s2">&quot;Negocio Mediano&lt;br&gt;(51-500)&quot;</span>,
+        enterprise: <span class="s2">&quot;Empresa&lt;br&gt;(&gt;500)&quot;</span>,
+    <span class="o">}</span>,
+<span class="o">}</span>,
+</pre></div>
+
+
+<h2 id="using-polyglot"><a href="#using-polyglot">Using Polyglot</a><a class="headerlink" href="#using-polyglot" title="Permanent link">&para;</a></h2>
+<p>Once all of your translations are implemented in the correct language file, you now need to find the <code>.js</code> files containing the strings you wish to translate.</p>
+<p>Before we begin substituting the translation strings, we first need to import the polyglot library which we've given the class name <code>VGTranslator</code></p>
+<div class="codehilite"><pre><span></span><span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">VGTranslator</span> <span class="nx">from</span> <span class="s1">&#39;translation/main&#39;</span><span class="p">;</span>  <span class="c1">// our polyglot wrapper</span>
+</pre></div>
+
+
+<p>Then substitue the translation text with our <code>VGTranslator</code> function</p>
+<div class="codehilite"><pre><span></span><span class="o">&lt;</span><span class="nx">h3</span><span class="o">&gt;</span>
+    <span class="p">{</span> <span class="nx">VGTranslator</span><span class="p">.</span><span class="nx">t</span><span class="p">(</span><span class="s1">&#39;survey.personalize&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;Scooby&quot;</span><span class="p">})</span> <span class="p">}</span>
+<span class="o">&lt;</span><span class="err">/h3&gt;</span>
+</pre></div>
+
+
+<p>Which outputs to:</p>
+<div class="codehilite"><pre><span></span>=&gt; &quot;Vamos a personalizar tu página, Scooby!&quot;
+</pre></div>
+
+
+<div class="admonition note">
+<p class="admonition-title">Using Variables With Translation Strings</p>
+<p>The example above includes a translation string that specifies a <code>%{name}</code> variable. Refer to the Interpolation section of the <a href="http://airbnb.io/polyglot.js/#interpolation" target="_blank">Polyglot Documentation</a> for more information on variables and pluralization.</p>
+</div>
 
             </article>
           </div>
