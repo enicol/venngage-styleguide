@@ -120,7 +120,7 @@
 
 
 
-  <a href="https://github.com/enicol/venngage-styleguide" title="Go to repository" class="md-source" data-md-source="github">
+  <a href="https://github.com/enicol/venngage-styleguide/" title="Go to repository" class="md-source" data-md-source="github">
 
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
@@ -165,7 +165,7 @@
 
 
 
-  <a href="https://github.com/enicol/venngage-styleguide" title="Go to repository" class="md-source" data-md-source="github">
+  <a href="https://github.com/enicol/venngage-styleguide/" title="Go to repository" class="md-source" data-md-source="github">
 
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
@@ -246,6 +246,13 @@
 
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
+
+        <li class="md-nav__item">
+  <a href="#adding-new-locales" title="Adding New Locales" class="md-nav__link">
+    Adding New Locales
+  </a>
+
+</li>
 
         <li class="md-nav__item">
   <a href="#adding-translations" title="Adding Translations" class="md-nav__link">
@@ -468,6 +475,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
 
         <li class="md-nav__item">
+  <a href="#adding-new-locales" title="Adding New Locales" class="md-nav__link">
+    Adding New Locales
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
   <a href="#adding-translations" title="Adding Translations" class="md-nav__link">
     Adding Translations
   </a>
@@ -499,7 +513,7 @@
                 <h1 id="internationalization-with-javascript">Internationalization with Javascript<a class="headerlink" href="#internationalization-with-javascript" title="Permanent link">&para;</a></h1>
 <p>As mentioned in the <em><a href="../../i18n/introduction">Introduction</a></em> this part of the guide assumes you have already translated strings from English into the language you are adding support for, and that the destination files for those translations are written in Javascript.</p>
 <p>We use <a href="http://airbnb.io/polyglot.js/#interpolation" target="_blank">Airbnb's Polyglot library</a> to handle all frontend translations. Please refer to their documentation for implementation examples.</p>
-<h2 id="adding-translations"><a href="#adding-translations">Adding Translations</a><a class="headerlink" href="#adding-translations" title="Permanent link">&para;</a></h2>
+<h2 id="adding-new-locales"><a href="#adding-locales">Adding New Locales</a><a class="headerlink" href="#adding-new-locales" title="Permanent link">&para;</a></h2>
 <p>All translation files for this type of internationalization can be found in one of two locations:</p>
 <ol>
 <li>
@@ -509,7 +523,20 @@
 <p><code>html/editor/src/translation/</code></p>
 </li>
 </ol>
-<p>Within those folders, you will find <code>main.js</code> which contains polyglot config and the <code>locales/</code> directory which contains all the translations for specific locales. It is in this folder that you will add any new translations.</p>
+<p>Within those folders, you will find <code>main.js</code> which contains polyglot config the <code>locales/</code> directory which contains all the translations for specific locales. It is in this folder that you will create a new file for the language you are adding support for.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>If you are adding language support for Hungarian, create a file called <code>hu.js</code> where you will add your translations in the next section.</p>
+</div>
+<p>Once the new language file is created, it needs to be imported in <code>main.js</code></p>
+<div class="codehilite"><pre><span></span><span class="kr">import</span> <span class="nx">Polyglot</span> <span class="nx">from</span> <span class="s2">&quot;node-polyglot&quot;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">en</span><span class="p">,</span> <span class="nx">es</span><span class="p">,</span> <span class="nx">fr</span><span class="p">,</span> <span class="nx">hu</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;./locales&quot;</span><span class="p">;</span>  <span class="c1">// import new locale here</span>
+
+<span class="kr">const</span> <span class="nx">language</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">en</span><span class="p">,</span> <span class="nx">es</span><span class="p">,</span> <span class="nx">fr</span><span class="p">,</span> <span class="nx">hu</span> <span class="p">};</span>  <span class="c1">// add new locale to language const</span>
+</pre></div>
+
+
+<h2 id="adding-translations"><a href="#adding-translations">Adding Translations</a><a class="headerlink" href="#adding-translations" title="Permanent link">&para;</a></h2>
 <p>Below you can see a sample of the file structure from <code>es.js</code>. Here we have nested objects of key/value pairs that are labeled according to the parts of the app they relate to. The example below is from the onboarding survey.</p>
 <div class="codehilite"><pre><span></span>survey: <span class="o">{</span>
     welcome: <span class="s2">&quot;¡Bienvenidos a Venngage %{name}!&quot;</span>,
@@ -546,7 +573,7 @@
 </pre></div>
 
 
-<div class="admonition note">
+<div class="admonition seealso">
 <p class="admonition-title">Using Variables With Translation Strings</p>
 <p>The example above includes a translation string that specifies a <code>%{name}</code> variable. Refer to the Interpolation section of the <a href="http://airbnb.io/polyglot.js/#interpolation" target="_blank">Polyglot Documentation</a> for more information on variables and pluralization.</p>
 </div>
@@ -631,6 +658,10 @@
 
       <script src="../../assets/javascripts/application-2afe21e0b2.js"></script>
       <script>var config={url:{base:"../.."}},app=new Application(config);app.initialize()</script>
+
+        <script src="../../search/require.js"></script>
+
+        <script src="../../search/search.js"></script>
 
 
 
