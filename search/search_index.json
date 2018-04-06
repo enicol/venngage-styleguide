@@ -12,7 +12,7 @@
         },
         {
             "location": "/i18n/introduction/",
-            "text": "Internationalization\n\n\nIntroduction\n\n\n\n\nThis walkthrough is intended to go over the steps taken in order to implement support for new languages within Venngage's infograph project.\n\n\nGetting Started\n\n\n\n\nOnce you have the translations for the language you are adding support for, determine where in our app the strings to be translated are stored\n\n\nIf the are stored in PHP files, please continue reading the \ni18n with PHP\n\n\nIf the are stored in Javascript files, please continue reading the \ni18n with Javascript",
+            "text": "Internationalization\n\n\nIntroduction\n\n\n\n\nThis walkthrough is intended to go over the steps needed in order to implement support for new languages within Venngage's infograph project.\n\n\nGetting Started\n\n\n\n\nOnce you have the translations for the language you are adding support for, determine where in our app the strings to be translated are stored\n\n\nIf they are stored in PHP files, please continue reading the \ni18n with PHP\n\n\nIf they are stored in Javascript files, please continue reading the \ni18n with Javascript",
             "title": "Introduction"
         },
         {
@@ -22,12 +22,12 @@
         },
         {
             "location": "/i18n/introduction/#introduction",
-            "text": "This walkthrough is intended to go over the steps taken in order to implement support for new languages within Venngage's infograph project.",
+            "text": "This walkthrough is intended to go over the steps needed in order to implement support for new languages within Venngage's infograph project.",
             "title": "Introduction"
         },
         {
             "location": "/i18n/introduction/#getting-started",
-            "text": "Once you have the translations for the language you are adding support for, determine where in our app the strings to be translated are stored  If the are stored in PHP files, please continue reading the  i18n with PHP  If the are stored in Javascript files, please continue reading the  i18n with Javascript",
+            "text": "Once you have the translations for the language you are adding support for, determine where in our app the strings to be translated are stored  If they are stored in PHP files, please continue reading the  i18n with PHP  If they are stored in Javascript files, please continue reading the  i18n with Javascript",
             "title": "Getting Started"
         },
         {
