@@ -2,12 +2,12 @@
 
 ## Introduction
 
---------
-This walkthrough is intended to go over the steps taken in order to implement support for new languages within Venngage's infograph project.
+---
 
-- get the translations
-- once you have them, you'll need to determine where in our app those translations will go, and what language they're written in
-- the 2 options here are Javascript and PHP
-- if the answer to the last step was PHP, please continue reading the [Translations in PHP](../i18n/php)
+This walkthrough is intended to go over the steps needed in order to implement support for new languages within Venngage's infograph project.
 
-### [1.1 Getting Started](#getting-started)
+### [Getting Started](#getting-started)
+
+- Once you have the translations for the language you are adding support for, determine where in our app the strings to be translated are stored
+- If they are stored in PHP files, please continue reading the [i18n with PHP](../i18n/php)
+- If they are stored in Javascript files, please continue reading the [i18n with Javascript](../i18n/javascript)

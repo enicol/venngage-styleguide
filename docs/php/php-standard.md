@@ -1,13 +1,11 @@
-PHP Basic Coding Standard
-=====================
+# PHP Basic Coding Standard
 
 >This section of the standard comprises what should be considered the standard
 coding elements that are required to ensure a high level of technical
 interoperability between shared PHP code.
 
-
 ## Overview
------------
+
 - Files MUST use only `<?php` and `<?=` tags.
 
 - Files MUST use only UTF-8 without BOM for PHP code.
@@ -24,19 +22,20 @@ interoperability between shared PHP code.
 
 - Method names MUST be declared in `camelCase`.
 
-
 ## 2. Files
---------
-### [2.1. PHP Tags](#files--tags)
+
+---
+
+### [2.1 PHP Tags](#files--tags)
 
 PHP code **MUST** use the long `<?php ?>` tags or the short-echo `<?= ?>` tags; it
 MUST NOT use the other tag variations.
 
-### [2.2. Character Encoding](#files--encoding)
+### [2.2 Character Encoding](#files--encoding)
 
 PHP code MUST use only UTF-8 without BOM.
 
-### [2.3. Side Effects](#files--side-effects)
+### [2.3 Side Effects](#files--side-effects)
 
 A file SHOULD declare new symbols (classes, functions, constants,
 etc.) and cause no other side effects, or it SHOULD execute logic with side
@@ -92,9 +91,9 @@ if (! function_exists('bar')) {
 }
 ```
 
-
 ## 3. Namespace and Class Names
-----------------------------
+
+---
 
 Namespaces and classes **MUST** follow an "autoloading" PSR: [[PSR-0], [PSR-4]].
 
@@ -129,7 +128,8 @@ class Vendor_Model_Foo
 ```
 
 ## 4. Class Constants, Properties, and Methods
--------------------------------------------
+
+---
 
 !!! note
     The term **class** refers to all classes, interfaces, and traits.
