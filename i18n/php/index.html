@@ -15,7 +15,7 @@
         <meta name="author" content="Venngage">
 
 
-        <link rel="shortcut icon" href="../../images/favicon.ico">
+        <link rel="shortcut icon" href="../../assets/images/favicon.ico">
 
       <meta name="generator" content="mkdocs+mkdocs-material#1.0.3">
 
@@ -279,6 +279,26 @@
 
 </li>
 
+        <li class="md-nav__item">
+  <a href="#4-adding-project-specific-locale-support" title="4. Adding Project Specific Locale Support" class="md-nav__link">
+    4. Adding Project Specific Locale Support
+  </a>
+
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#infograph" title="Infograph:" class="md-nav__link">
+    Infograph:
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
     </ul>
 
 </nav>
@@ -495,6 +515,26 @@
 
 </li>
 
+        <li class="md-nav__item">
+  <a href="#4-adding-project-specific-locale-support" title="4. Adding Project Specific Locale Support" class="md-nav__link">
+    4. Adding Project Specific Locale Support
+  </a>
+
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+
+          <li class="md-nav__item">
+  <a href="#infograph" title="Infograph:" class="md-nav__link">
+    Infograph:
+  </a>
+
+</li>
+
+      </ul>
+    </nav>
+
+</li>
+
     </ul>
 
 </nav>
@@ -514,7 +554,7 @@
 <p>This section explains how to implement translations within PHP files, and assumes you have read the <em><a href="../../i18n/introduction">Introduction</a></em> from an earlier section.</p>
 <p>We use <a href="https://www.codeigniter.com/userguide3/libraries/language.html?highlight=language" target="_blank">Codeigniter's Language Class</a> to handle all backend translations. Please refer to their documentation for implementation examples.</p>
 <h2 id="1-adding-translations"><a href="#adding-translations">1. Adding translations</a><a class="headerlink" href="#1-adding-translations" title="Permanent link">&para;</a></h2>
-<p>Adding internationalization support for PHP files relatively straightforward. First you must add the translated strings to the <code>messages.po</code> found in the same directory that matches the locale you are adding support for:</p>
+<p>Adding internationalization support for PHP files relatively straightforward. First you must add the translated strings to the <code>messages.po</code> file. Currently, the two repositories that contain a <code>messages.po</code> file are the Homepage repo and the Infograph repo. Within both of these repos the <code>.po</code> files can be found in a subdirectory of <code>locale/</code> that matches the language you are adding support for:</p>
 <blockquote>
 <p>i.e. Spanish translations are added to the <code>messages.po</code> within <code>/locale/es/LC_MESSAGES/</code></p>
 </blockquote>
@@ -568,6 +608,33 @@ locale -a
 <p>Once you've ensured you have the correct locales installed, exit the container and recompile &amp; restart <code>php-fpm</code> to see your changes.</p>
 <div class="codehilite"><pre><span></span>docker <span class="nb">exec</span> docker_workspace_1 bash /deploy/Venngage/locale/compile.sh <span class="o">&amp;&amp;</span> <span class="se">\</span>
 docker <span class="nb">exec</span> docker_php-fpm_1 bash service php5.6-fpm restart
+</pre></div>
+
+
+<h2 id="4-adding-project-specific-locale-support"><a href="#locale-support">4. Adding Project Specific Locale Support</a><a class="headerlink" href="#4-adding-project-specific-locale-support" title="Permanent link">&para;</a></h2>
+<h3 id="infograph">Infograph:<a class="headerlink" href="#infograph" title="Permanent link">&para;</a></h3>
+<p><strong>Filename:</strong> ci/system/core/CodeIgniter.php</p>
+<div class="codehilite"><pre><span></span><span class="x">&lt;!-- Add locale to locale lookup and $lang_map --&gt;</span>
+
+<span class="x">$matching_lang = locale_lookup([&#39;es&#39;, &#39;fr&#39;, &#39;it&#39;], $header_lang, false, &#39;en&#39;);</span>
+
+<span class="x">$lang_map = array(</span>
+<span class="x">  &#39;es&#39; =&gt; &#39;es_ES.UTF-8&#39;,</span>
+<span class="x">  &#39;fr&#39; =&gt; &#39;fr_FR.UTF-8&#39;,</span>
+<span class="x">  &#39;en&#39; =&gt; &#39;en_US.UTF-8&#39;,</span>
+<span class="x">  &#39;it&#39; =&gt; &#39;it_IT.UTF-8&#39;</span>
+<span class="x">);</span>
+</pre></div>
+
+
+<p><strong>Filename:</strong> docker/php-fpm/5.6/Dockerfile</p>
+<div class="codehilite"><pre><span></span><span class="c1"># Add locale to list of installed locales in Dockerfile</span>
+RUN apt-get -y update <span class="o">&amp;&amp;</span> <span class="se">\</span>
+    apt-get install -y locales <span class="o">&amp;&amp;</span> <span class="se">\</span>
+    sed -i -e <span class="s1">&#39;s/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/&#39;</span> /etc/locale.gen <span class="o">&amp;&amp;</span> <span class="se">\</span>
+    sed -i -e <span class="s1">&#39;s/# fr_FR.UTF-8 UTF-8/fr_FR.UTF-8 UTF-8/&#39;</span> /etc/locale.gen <span class="o">&amp;&amp;</span> <span class="se">\</span>
+    sed -i -e <span class="s1">&#39;s/# es_ES.UTF-8 UTF-8/es_ES.UTF-8 UTF-8/&#39;</span> /etc/locale.gen <span class="o">&amp;&amp;</span> <span class="se">\</span>
+    sed -i -e <span class="s1">&#39;s/# it_IT.UTF-8 UTF-8/it_IT.UTF-8 UTF-8/&#39;</span> /etc/locale.gen <span class="o">&amp;&amp;</span> <span class="se">\</span>
 </pre></div>
 
             </article>
