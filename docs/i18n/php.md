@@ -6,7 +6,7 @@ We use <a href="https://www.codeigniter.com/userguide3/libraries/language.html?h
 
 ## [1. Adding translations](#adding-translations)
 
-Adding internationalization support for PHP files relatively straightforward. First you must add the translated strings to the `messages.po` found in the same directory that matches the locale you are adding support for:
+Adding internationalization support for PHP files relatively straightforward. First you must add the translated strings to the `messages.po` file. Currently, the two repositories that contain a `messages.po` file are the Homepage repo and the Infograph repo. Within both of these repos the `.po` files can be found in a subdirectory of `locale/` that matches the language you are adding support for:
 > i.e. Spanish translations are added to the `messages.po` within `/locale/es/LC_MESSAGES/`
 
 ## [2. PO File Structure](#po-structure)
@@ -69,4 +69,34 @@ Once you've ensured you have the correct locales installed, exit the container a
 ```sh
 docker exec docker_workspace_1 bash /deploy/Venngage/locale/compile.sh && \
 docker exec docker_php-fpm_1 bash service php5.6-fpm restart
+```
+
+## [4. Adding Project Specific Locale Support](#locale-support)
+
+### Infograph:
+**Filename:** ci/system/core/CodeIgniter.php
+
+```php
+<!-- Add locale to locale lookup and $lang_map -->
+
+$matching_lang = locale_lookup(['es', 'fr', 'it'], $header_lang, false, 'en');
+
+$lang_map = array(
+  'es' => 'es_ES.UTF-8',
+  'fr' => 'fr_FR.UTF-8',
+  'en' => 'en_US.UTF-8',
+  'it' => 'it_IT.UTF-8'
+);
+```
+
+**Filename:** docker/php-fpm/5.6/Dockerfile
+
+```sh
+# Add locale to list of installed locales in Dockerfile
+RUN apt-get -y update && \
+    apt-get install -y locales && \
+    sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
+    sed -i -e 's/# fr_FR.UTF-8 UTF-8/fr_FR.UTF-8 UTF-8/' /etc/locale.gen && \
+    sed -i -e 's/# es_ES.UTF-8 UTF-8/es_ES.UTF-8 UTF-8/' /etc/locale.gen && \
+    sed -i -e 's/# it_IT.UTF-8 UTF-8/it_IT.UTF-8 UTF-8/' /etc/locale.gen && \
 ```
