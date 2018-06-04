@@ -3,7 +3,7 @@ site_name: 'Venngage'
 site_description: 'Venngage Developer Documentation and Coding Styleguide'
 site_author: 'Venngage'
 site_url: 'https://enicol.github.io/venngage-styleguide/'
-site_favicon: 'images/favicon.ico'
+# site_favicon: 'images/favicon.ico'
 
 # Repository
 repo_name: 'GitHub'
@@ -13,7 +13,8 @@ repo_url: 'https://github.com/enicol/venngage-styleguide'
 copyright: 'Copyright &copy; 2018 Venngage'
 
 # Documentation and theme
-theme: 'material'
+theme:
+  name: 'material'
 
 # Options
 extra:
@@ -24,6 +25,10 @@ extra:
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
+  language: en
+  feature:
+    tabs: true
+  favicon: 'images/favicon.ico'
   social:
     - type: 'github'
       link: 'https://github.com/Venngage'

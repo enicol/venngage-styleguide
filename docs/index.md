@@ -2,8 +2,8 @@
 
 -----
 
-1. [Internationalization](i18n/introduction)
-    1. [i18n with Javscript](i18n/javascript)
+1. [Internationalization](/i18n/introduction)
+    1. [i18n with Javascript](i18n/javascript)
     1. [i18n with PHP](i18n/php)
 2. [Javascript Styleguide](js/javascript)
     1. [React](js/react)
