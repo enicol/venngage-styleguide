@@ -105,6 +105,7 @@ RUN apt-get -y update && \
 **Filename:** `./src/internationalization.php`
 
 Add the new locale to the $lang_map array for venngage.com, venngage.beer, and localhost
+
 ```php
 $lang_map = array(
     'it.venngage.com' => 'it_IT.UTF-8',
@@ -118,4 +119,5 @@ $lang_map = array(
     'de.venngage.com' => 'de_DE.UTF-8'
   );
 ```
+
 You also need to set up a subdomain for each language. To access the homepage in different languages, you must place the first 2 letters of the locale in front of https://fr.venngage.com
