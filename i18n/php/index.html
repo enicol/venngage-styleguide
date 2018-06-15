@@ -288,15 +288,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#infograph" title="Infograph:" class="md-nav__link">
-    Infograph:
+  <a href="#infograph" title="Infograph" class="md-nav__link">
+    Infograph
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#homepage" title="Homepage:" class="md-nav__link">
-    Homepage:
+  <a href="#homepage" title="Homepage" class="md-nav__link">
+    Homepage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assets" title="Assets" class="md-nav__link">
+    Assets
   </a>
   
 </li>
@@ -531,15 +538,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#infograph" title="Infograph:" class="md-nav__link">
-    Infograph:
+  <a href="#infograph" title="Infograph" class="md-nav__link">
+    Infograph
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#homepage" title="Homepage:" class="md-nav__link">
-    Homepage:
+  <a href="#homepage" title="Homepage" class="md-nav__link">
+    Homepage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assets" title="Assets" class="md-nav__link">
+    Assets
   </a>
   
 </li>
@@ -626,7 +640,7 @@ docker <span class="nb">exec</span> docker_php-fpm_1 bash service php5.6-fpm res
 
 
 <h2 id="4-adding-project-specific-locale-support"><a href="#locale-support">4. Adding Project Specific Locale Support</a><a class="headerlink" href="#4-adding-project-specific-locale-support" title="Permanent link">&para;</a></h2>
-<h3 id="infograph">Infograph:<a class="headerlink" href="#infograph" title="Permanent link">&para;</a></h3>
+<h3 id="infograph">Infograph<a class="headerlink" href="#infograph" title="Permanent link">&para;</a></h3>
 <p><strong>Filename:</strong> ci/system/core/CodeIgniter.php</p>
 <div class="codehilite"><pre><span></span><span class="x">&lt;!-- Add locale to locale lookup and $lang_map --&gt;</span>
 
@@ -652,7 +666,7 @@ RUN apt-get -y update <span class="o">&amp;&amp;</span> <span class="se">\</span
 </pre></div>
 
 
-<h3 id="homepage">Homepage:<a class="headerlink" href="#homepage" title="Permanent link">&para;</a></h3>
+<h3 id="homepage">Homepage<a class="headerlink" href="#homepage" title="Permanent link">&para;</a></h3>
 <p><strong>Filename:</strong> <code>./src/internationalization.php</code></p>
 <p>Add the new locale to the $lang_map array for venngage.com, venngage.beer, and localhost</p>
 <div class="codehilite"><pre><span></span><span class="x">$lang_map = array(</span>
@@ -670,6 +684,8 @@ RUN apt-get -y update <span class="o">&amp;&amp;</span> <span class="se">\</span
 
 
 <p>You also need to set up a subdomain for each language. To access the homepage in different languages, you must place the first 2 letters of the locale in front of https://fr.venngage.com</p>
+<h3 id="assets">Assets<a class="headerlink" href="#assets" title="Permanent link">&para;</a></h3>
+<p><strong>Filename:</strong> <code>./TODO</code></p>
               
             </article>
           </div>
