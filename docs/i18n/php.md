@@ -73,7 +73,7 @@ docker exec docker_php-fpm_1 bash service php5.6-fpm restart
 
 ## [4. Adding Project Specific Locale Support](#locale-support)
 
-### Infograph:
+### Infograph
 **Filename:** ci/system/core/CodeIgniter.php
 
 ```php
@@ -101,7 +101,7 @@ RUN apt-get -y update && \
     sed -i -e 's/# it_IT.UTF-8 UTF-8/it_IT.UTF-8 UTF-8/' /etc/locale.gen && \
 ```
 
-### Homepage:
+### Homepage
 **Filename:** `./src/internationalization.php`
 
 Add the new locale to the $lang_map array for venngage.com, venngage.beer, and localhost
@@ -121,3 +121,6 @@ $lang_map = array(
 ```
 
 You also need to set up a subdomain for each language. To access the homepage in different languages, you must place the first 2 letters of the locale in front of https://fr.venngage.com
+
+### Assets
+**Filename:** `./TODO`
