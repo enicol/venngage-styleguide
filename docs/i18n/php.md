@@ -43,7 +43,7 @@ docker exec docker_php-fpm_1 bash service php5.6-fpm restart
 
 ## [3. Adding Locale Support](#locale-support)
 
-If the translation changes you made aren't showing up on your local, first check that your browser is set to the language you are adding support for. If you have followed all of the preceding steps and your changes are still not rendering, check to make sure you have the locale support installed for the specific locale you're working with.
+If changes to translations aren't showing up on your local, ensure your browser is set to the language you are adding support for. If you have followed all of the preceding steps and your changes are still not rendering, check to make sure you have the locale support installed for the specific locale you're working with.
 
 You can check which locales you have installed by going into the `php-fpm` container
 
@@ -89,7 +89,7 @@ $lang_map = array(
 );
 ```
 
-**Filename:** docker/php-fpm/5.6/Dockerfile
+**Filename:** `./docker/php-fpm/5.6/Dockerfile`
 
 ```sh
 # Add locale to list of installed locales in Dockerfile
@@ -100,3 +100,22 @@ RUN apt-get -y update && \
     sed -i -e 's/# es_ES.UTF-8 UTF-8/es_ES.UTF-8 UTF-8/' /etc/locale.gen && \
     sed -i -e 's/# it_IT.UTF-8 UTF-8/it_IT.UTF-8 UTF-8/' /etc/locale.gen && \
 ```
+
+### Homepage:
+**Filename:** `./src/internationalization.php`
+
+Add the new locale to the $lang_map array for venngage.com, venngage.beer, and localhost
+```php
+$lang_map = array(
+    'it.venngage.com' => 'it_IT.UTF-8',
+    'it.venngage.beer' => 'it_IT.UTF-8',
+    'it.localhost' => 'it_IT.UTF-8',
+    'pt.venngage.com' => 'pt_BR.UTF-8',
+    'pt.venngage.beer' => 'pt_BR.UTF-8',
+    'pt.localhost' => 'pt_BR.UTF-8',
+    'de.localhost' => 'de_DE.UTF-8',
+    'de.venngage.beer' => 'de_DE.UTF-8',
+    'de.venngage.com' => 'de_DE.UTF-8'
+  );
+```
+You also need to set up a subdomain for each language. To access the homepage in different languages, you must place the first 2 letters of the locale in front of https://fr.venngage.com
