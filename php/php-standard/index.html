@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Venngage Developer Documentation and Coding Styleguide">
+        <meta name="description" content="Venngage JS and PHP Coding Styleguide">
       
       
         <link rel="canonical" href="https://enicol.github.io/venngage-styleguide/php/php-standard/">
@@ -15,7 +15,7 @@
         <meta name="author" content="Venngage">
       
       
-        <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+        <link rel="shortcut icon" href="../../images/favicon.ico">
       
       <meta name="generator" content="mkdocs+mkdocs-material#1.0.3">
     
@@ -200,64 +200,10 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
-      Internationalization
-    </label>
-    <nav class="md-nav" data-md-component="collapsible">
-      <label class="md-nav__title" for="nav-2">
-        Internationalization
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="../../i18n/introduction/" title="Introduction" class="md-nav__link">
-        Introduction
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="../../i18n/javascript/" title="i18n with Javascript" class="md-nav__link">
-        i18n with Javascript
-      </a>
-    
-  </li>
-
-        
-          
-          
-  <li class="md-nav__item">
-    
-      <a href="../../i18n/php/" title="i18n with PHP" class="md-nav__link">
-        i18n with PHP
-      </a>
-    
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
-    
-    <label class="md-nav__link" for="nav-3">
       Javascript
     </label>
     <nav class="md-nav" data-md-component="collapsible">
-      <label class="md-nav__title" for="nav-3">
+      <label class="md-nav__title" for="nav-2">
         Javascript
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -305,13 +251,13 @@
       
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-3">
       PHP
     </label>
     <nav class="md-nav" data-md-component="collapsible">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-3">
         PHP
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -360,22 +306,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-php-tags" title="2.1 PHP Tags" class="md-nav__link">
-    2.1 PHP Tags
+  <a href="#21-php-tags" title="2.1. PHP Tags" class="md-nav__link">
+    2.1. PHP Tags
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-character-encoding" title="2.2 Character Encoding" class="md-nav__link">
-    2.2 Character Encoding
+  <a href="#22-character-encoding" title="2.2. Character Encoding" class="md-nav__link">
+    2.2. Character Encoding
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#23-side-effects" title="2.3 Side Effects" class="md-nav__link">
-    2.3 Side Effects
+  <a href="#23-side-effects" title="2.3. Side Effects" class="md-nav__link">
+    2.3. Side Effects
   </a>
   
 </li>
@@ -497,17 +443,6 @@
       
   <li class="md-nav__item">
     
-      <a href="../../support/dev-support/" title="Dev Support" class="md-nav__link">
-        Dev Support
-      </a>
-    
-  </li>
-
-    
-      
-      
-  <li class="md-nav__item">
-    
       <a href="../../about/license/" title="Licenses" class="md-nav__link">
         Licenses
       </a>
@@ -551,22 +486,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-php-tags" title="2.1 PHP Tags" class="md-nav__link">
-    2.1 PHP Tags
+  <a href="#21-php-tags" title="2.1. PHP Tags" class="md-nav__link">
+    2.1. PHP Tags
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#22-character-encoding" title="2.2 Character Encoding" class="md-nav__link">
-    2.2 Character Encoding
+  <a href="#22-character-encoding" title="2.2. Character Encoding" class="md-nav__link">
+    2.2. Character Encoding
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#23-side-effects" title="2.3 Side Effects" class="md-nav__link">
-    2.3 Side Effects
+  <a href="#23-side-effects" title="2.3. Side Effects" class="md-nav__link">
+    2.3. Side Effects
   </a>
   
 </li>
@@ -639,6 +574,7 @@ coding elements that are required to ensure a high level of technical
 interoperability between shared PHP code.</p>
 </blockquote>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<hr />
 <ul>
 <li>
 <p>Files MUST use only <code>&lt;?php</code> and <code>&lt;?=</code> tags.</p>
@@ -666,12 +602,12 @@ interoperability between shared PHP code.</p>
 </ul>
 <h2 id="2-files">2. Files<a class="headerlink" href="#2-files" title="Permanent link">&para;</a></h2>
 <hr />
-<h3 id="21-php-tags"><a href="#files--tags">2.1 PHP Tags</a><a class="headerlink" href="#21-php-tags" title="Permanent link">&para;</a></h3>
+<h3 id="21-php-tags"><a href="#files--tags">2.1. PHP Tags</a><a class="headerlink" href="#21-php-tags" title="Permanent link">&para;</a></h3>
 <p>PHP code <strong>MUST</strong> use the long <code>&lt;?php ?&gt;</code> tags or the short-echo <code>&lt;?= ?&gt;</code> tags; it
 MUST NOT use the other tag variations.</p>
-<h3 id="22-character-encoding"><a href="#files--encoding">2.2 Character Encoding</a><a class="headerlink" href="#22-character-encoding" title="Permanent link">&para;</a></h3>
+<h3 id="22-character-encoding"><a href="#files--encoding">2.2. Character Encoding</a><a class="headerlink" href="#22-character-encoding" title="Permanent link">&para;</a></h3>
 <p>PHP code MUST use only UTF-8 without BOM.</p>
-<h3 id="23-side-effects"><a href="#files--side-effects">2.3 Side Effects</a><a class="headerlink" href="#23-side-effects" title="Permanent link">&para;</a></h3>
+<h3 id="23-side-effects"><a href="#files--side-effects">2.3. Side Effects</a><a class="headerlink" href="#23-side-effects" title="Permanent link">&para;</a></h3>
 <p>A file SHOULD declare new symbols (classes, functions, constants,
 etc.) and cause no other side effects, or it SHOULD execute logic with side
 effects, but SHOULD NOT do both.</p>
@@ -830,7 +766,7 @@ or method-level.</p>
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2018 Venngage
+            Copyright &copy; 2017 Venngage
           </div>
         
         powered by
