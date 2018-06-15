@@ -12,6 +12,28 @@
     
         
     <url>
+     <loc>https://enicol.github.io/venngage-styleguide//i18n/introduction/</loc>
+     <lastmod>2018-06-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://enicol.github.io/venngage-styleguide//i18n/javascript/</loc>
+     <lastmod>2018-06-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://enicol.github.io/venngage-styleguide//i18n/php/</loc>
+     <lastmod>2018-06-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
      <loc>https://enicol.github.io/venngage-styleguide//js/javascript/</loc>
      <lastmod>2018-06-15</lastmod>
      <changefreq>daily</changefreq>
@@ -69,6 +91,14 @@
      <changefreq>daily</changefreq>
     </url>
         
+    
+
+    
+    <url>
+     <loc>https://enicol.github.io/venngage-styleguide//support/dev-support/</loc>
+     <lastmod>2018-06-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
     
 
     
