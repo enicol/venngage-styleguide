@@ -1,7 +1,5 @@
 # Dev Support Wiki
 
- # Dev Support Wiki
-
 
 ## [Outline](#outline)
 1. [Downgrades](#downgrades)
@@ -10,10 +8,14 @@
 1. [Downgrade Site License](#downgrade-site-license)
 1. [Restore Infographic Widgets](#restore-infographic-widgets)
 
-### USER TYPES
-1. *Business*: team_id != null
-2. *Premium* || *Premium Guest* (w teamID)
-1: *Free* (and make sure team_id = NULL)
+### User Types Classification in the DB
+
+| Name          | Type |    Indicator    |
+|---------------|-----:|:---------------:|
+| Free          |    1 |  team_id = NULL |
+| Business      |    1 | team_id != NULL |
+| Premium       |    2 |                 |
+| Premium Guest |    2 |  has a team_id  |
 
 ## Downgrades
 
@@ -107,10 +109,14 @@ Additional members charge:
 
 > If max_members === base_members, they will not be charged for additional team members
 
-_PREMIUM_                                                            _BUSINESS_
-* Infographic_Premium_1           $19                     Business_Plan_1         $49
-* Infographic_Premium_3           $49                     Business_Plan_3         $129
-* Infographic_Premium_12        $190                   Business_Plan_12       $468
+| Plan Name              | Price |
+|------------------------|------:|
+| Infographic_Premium_1  |   $19 |
+| Infographic_Premium_3  |   $49 |
+| Infographic_Premium_12 |  $190 |
+| Business_Plan_1        |   $49 |
+| Business_Plan_3        |  $129 |
+| Business_Plan_12       |  $468 |
 
 Old Pricing:
 ::base_members = 2, max_members = 2, member_price = 180 (yearly), 49(quarterly), 19(monthly)::
