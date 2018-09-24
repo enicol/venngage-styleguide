@@ -635,7 +635,7 @@
                 <h1 id="internationalization">Internationalization<a class="headerlink" href="#internationalization" title="Permanent link">&para;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <hr />
-<p>This walkthrough is intended to go over the steps needed in order to implement support for new languages within Venngage's infograph project.</p>
+<p>This walkthrough is intended to go over the steps needed in order to implement support for new languages within Venngage's Web App.</p>
 <h2 id="outline"><a href="#outline">Outline</a><a class="headerlink" href="#outline" title="Permanent link">&para;</a></h2>
 <ol>
 <li><a href="#release-schedule">Release Schedule</a></li>
@@ -663,7 +663,11 @@
 <ul>
 <li>If changes were made to the translation files between receiving and uploading them to staging, the developer must re-upload the modified files to the master docs Trello card so they are ready to hand off to the QA Translator</li>
 <li>Once this is done and the new language is live on staging,  the QA Translator can begin auditing the site and updating the translation files with their changes<ul>
-<li>Ensure any changes to specific translations are consistent and updated across all other files containing the same translation </li>
+<li>Ensure any changes to specific translations are consistent and updated across all other files containing the same translation</li>
+</ul>
+</li>
+<li>Make sure that the sitemap has been added to the subdomain for SEO<ul>
+<li>You can test this by going to  https://pt.venngage.com/sitemap.xml</li>
 </ul>
 </li>
 <li>After the 2 weeks QA translator uploads their edited translation files to the Trello card and notifies the card that the new files are ready to be updated on staging</li>
@@ -785,6 +789,7 @@
 </ul>
 <p><strong>SEO</strong></p>
 <ul>
+<li>Make sure “add a sitemap” is added to the checklist of the international card</li>
 <li><em>need SEO input @Cecilien</em></li>
 </ul>
 <p><strong>Developer</strong></p>
