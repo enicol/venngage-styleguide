@@ -57,6 +57,7 @@ Below is a list of the app's critical pages and the file type for translations o
 1. Landing Page - *po*
 1. Onboarding - *js*
 1. Pricing - *po*
+1. Static Templates Page - *js*
 1. Templates - *js*
 
 *need to add SEO pages @Cecilien*
