@@ -9,7 +9,7 @@ This walkthrough is intended to go over the steps needed in order to implement s
 ## [Outline](#outline)
 1. [Release Schedule](#release-schedule)
 1. [Critical Pages](#critical-pages)
-1. [Roles & Responsibilities](#roles)
+1. [Roles and Responsibilities](#roles-and-responsibilities)
 1. [Release Checklist](#release-checklist)
 
 
