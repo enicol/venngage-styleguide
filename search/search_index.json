@@ -2,17 +2,17 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Venngage Developer Documentation\n\n\n\n\n\n\nInternationalization\n\n\ni18n with Javascript\n\n\ni18n with PHP\n\n\n\n\n\n\n\n\nJavascript Styleguide\n\n\n\n\nReact\n\n\nCSS in Javascript\n\n\n\n\n\n\n\n\nPHP Coding Standards\n\n\n\n\nStyleguide\n\n\nLogger Interface\n\n\nAutoloader\n\n\nCache\n\n\nHTTP Messages\n\n\n\n\n\n\nDev Support\n\n\nLicenses", 
+            "text": "Venngage Developer Documentation\n\n\n\n\n\n\nInternationalization\n\n\nProcess Overview\n\n\ni18n with Javascript\n\n\ni18n with PHP\n\n\n\n\n\n\n\n\nJavascript Styleguide\n\n\n\n\nReact\n\n\nCSS in Javascript\n\n\n\n\n\n\n\n\nPHP Coding Standards\n\n\n\n\nStyleguide\n\n\nLogger Interface\n\n\nAutoloader\n\n\nCache\n\n\nHTTP Messages\n\n\n\n\n\n\nDev Support\n\n\nLicenses", 
             "title": "Home"
         }, 
         {
             "location": "/#venngage-developer-documentation", 
-            "text": "Internationalization  i18n with Javascript  i18n with PHP     Javascript Styleguide   React  CSS in Javascript     PHP Coding Standards   Styleguide  Logger Interface  Autoloader  Cache  HTTP Messages    Dev Support  Licenses", 
+            "text": "Internationalization  Process Overview  i18n with Javascript  i18n with PHP     Javascript Styleguide   React  CSS in Javascript     PHP Coding Standards   Styleguide  Logger Interface  Autoloader  Cache  HTTP Messages    Dev Support  Licenses", 
             "title": "Venngage Developer Documentation"
         }, 
         {
             "location": "/i18n/introduction/", 
-            "text": "Internationalization\n\n\nIntroduction\n\n\n\n\nThis walkthrough is intended to go over the steps needed in order to implement support for new languages within Venngage's infograph project.\n\n\nGetting Started\n\n\n\n\nOnce you have the translations for the language you are adding support for, determine where in our app the strings to be translated are stored\n\n\nIf they are stored in PHP files, please continue reading the \ni18n with PHP\n\n\nIf they are stored in Javascript files, please continue reading the \ni18n with Javascript", 
+            "text": "Internationalization\n\n\nIntroduction\n\n\n\n\nThis walkthrough is intended to go over the steps needed in order to implement support for new languages within Venngage's infograph project.\n\n\nOutline\n\n\n\n\nRelease Schedule\n\n\nCritical Pages\n\n\nRoles \n Responsibilities\n\n\nRelease Checklist\n\n\n\n\nRELEASE SCHEDULE\n\n\n\n\nSTAGE 1\n\n\nInitial File Translation ~ 2 weeks\n\n\n\n\nEnsure the most recent version of master docs is uploaded to Trello card (this happens first day of new release schedule)\n\n\nTranslator downloads the up-to-date version of master docs from Trello card and begins translating them\n\n\nOnce the translator is done with the files, they should ensure that \n\n\nall translations are consistent across files \n\n\nthat all files are UTF-8 encoded \n\n\n\n\n\n\nOnce both of these checks are done, translators should re-upload them to  Trello card [INSERT TRELLO CARD NAME] and notify the card that the files have been updated\n\n\nThe developer should then download and begin implementing and testing the the new language files. Once this is done, the developer should create pull requests to start merging the new language files in time for internal release\n\n\n\n\nSTAGE 2\n\n\nInternal Release ~ 2 weeks\n\n\n\n\nIf changes were made to the translation files between receiving and uploading them to staging, the developer must re-upload the modified files to the master docs Trello card so they are ready to hand off to the QA Translator\n\n\nOnce this is done and the new language is live on staging,  the QA Translator can begin auditing the site and updating the translation files with their changes\n\n\nEnsure any changes to specific translations are consistent and updated across all other files containing the same translation \n\n\n\n\n\n\nAfter the 2 weeks QA translator uploads their edited translation files to the Trello card and notifies the card that the new files are ready to be updated on staging\n\n\n\n\nSTAGE 3\n\n\nProduct Sprint ~ 2 weeks\n\n\n\n\nOnce the QA has uploaded the new files to Trello, the developer should upload the new files to staging as soon as possible so that the Engineering QA\u2019s can have ample time to carry out testing\n\n\n\n\nCritical Pages\n\n\n\n\nBelow is a list of the app's critical pages and the file type for translations on that page\n1. Accounts - \njs\n\n1. Brand - \njs\n\n1. Editor - \njs \n po\n\n1. Infographics - \njs\n\n1. Landing Page - \npo\n\n1. Onboarding - \njs\n\n1. Pricing - \npo\n\n1. Templates - \njs\n\n\nneed to add SEO pages @Cecilien\n\n\n\n\n\n\n\n\nInfograph\n\n\nAssets\n\n\nHomepage\n\n\n\n\n\n\n\n\n\n\nx\n\n\nAccounts\n\n\nx\n\n\n\n\n\n\nx\n\n\nBrand\n\n\nx\n\n\n\n\n\n\nEditor\n\n\nx\n\n\nx\n\n\n\n\n\n\nInfographics\n\n\nx\n\n\nx\n\n\n\n\n\n\nx\n\n\nx\n\n\nLanding Page\n\n\n\n\n\n\nx\n\n\nOnboarding\n\n\nx\n\n\n\n\n\n\nx\n\n\nx\n\n\nPricing\n\n\n\n\n\n\n\n\n\n\nStatic Templates\n\n\n\n\n\n\nTemplates\n\n\nx\n\n\nx\n\n\n\n\n\n\n\n\nRoles\n\n\n\n\nBelow is a list of roles and responsibilities for the different groups involved in the translations process\n\n\nMarketer:\n \n- establish contact with the Translator and \n- ensure Master Docs files are updated prior to translation handoff to Translator\n- \n\n\nTranslator\n\n- Downloads the master docs from Trello card\n- Complete translations within 2 week period \n re-upload to Trello card\n- Ensures all new translations are:\n    - Consistent\n    - Similar character count to English translations\n\n\nQA Translator\n\n- Must make an list of all translation issues \n inconsistencies throughout site\n- Update the Master Docs files with changes from their list\n\n\nProduct\n\n- New translations should not drastically affect the appearance elements within the app\n    - i.e Causing a button's text to wrap to a new line or go beyond its container\n- Prior to release, ensure the following critical areas function properly with the new translations\n    - upgrade paths\n    - export\n    - business features\n- \nneed SEO input @Joanna\n\n\nSEO\n\n- \nneed SEO input @Cecilien\n\n\nDeveloper\n\n- Upload the most recent version of the translation files to Master Docs Trello card\n- Any new features need to be internationalization friendly (no inline HTML/CSS etc) \n- Moving and refactoring code needs to also make sure i18n is considered\n    - When translations are migrated over to a new repo, the translation entries should be removed from the old location's files\n- All new translation keys should follow the same conventions as \n\n\n    \n// en.js\n\n    \npresentations\n:\n \nPresentation\n,\n\n    \nposters\n:\n \nPoster\n,\n\n    \nreports\n:\n \nReport\n,\n\n    \nresumes\n:\n \nResume\n,\n\n    \nsocial media\n:\n \nSocial\n,\n \n// Bad - Inconsistent key syntax\n\n    \nflyers\n:\n \nFlyer\n,\n\n\n\n\n\n\n\n\n3rd party APIs must be updated to support to locale\n\n\nVIP ~ Kendrick\n\n\nroute53 ~ Kendrick\n\n\nAlgolia ~ any Dev\n\n\ngoogle console ~ Kendrick or Kyu\n\n\n\n\n\n\n\n\nRelease Checklist\n\n\n\n\nProduct\n\n- Prior to, and post-release please ensure the following critical areas function properly with the new translations\n    - upgrade paths\n    - export\n    - business features\n- \nneed SEO input @Joanna\n\n\nSEO\n\n- Test to make sure SEO is implemented and functions properly\n- \nneed SEO input @Cecilien\n\n\nProduct\n\n- [x] Test critical pages and upgrade paths\n    - Upgrade paths\n    - \nCritical pages\n\n    - Export\n    - Business Features\n- \nneed SEO input @Joanna\n\n\nDeveloper\n\n- Make sure all translations are rendered properly and don't adversely affect the tool's functionality\n- [x] Ensure all 3rd party APIs have been updated to support new language\n    - VIP ~ Kendrick\n    - route53 ~ Kendrick\n    - Algolia ~ any Dev\n    - google console ~ Kendrick or Kyu\n\n\nGetting Started ~ \nDevelopers\n\n\n\n\nOnce you have the translations for the language you are adding support for, determine where in our app the strings to be translated are stored\n\n\nIf they are stored in PHP files, please continue reading the \ni18n with PHP\n\n\nIf they are stored in Javascript files, please continue reading the \ni18n with Javascript", 
             "title": "Introduction"
         }, 
         {
@@ -26,9 +26,64 @@
             "title": "Introduction"
         }, 
         {
-            "location": "/i18n/introduction/#getting-started", 
+            "location": "/i18n/introduction/#outline", 
+            "text": "Release Schedule  Critical Pages  Roles   Responsibilities  Release Checklist", 
+            "title": "Outline"
+        }, 
+        {
+            "location": "/i18n/introduction/#release-schedule", 
+            "text": "", 
+            "title": "RELEASE SCHEDULE"
+        }, 
+        {
+            "location": "/i18n/introduction/#stage-1", 
+            "text": "", 
+            "title": "STAGE 1"
+        }, 
+        {
+            "location": "/i18n/introduction/#initial-file-translation-2-weeks", 
+            "text": "Ensure the most recent version of master docs is uploaded to Trello card (this happens first day of new release schedule)  Translator downloads the up-to-date version of master docs from Trello card and begins translating them  Once the translator is done with the files, they should ensure that   all translations are consistent across files   that all files are UTF-8 encoded     Once both of these checks are done, translators should re-upload them to  Trello card [INSERT TRELLO CARD NAME] and notify the card that the files have been updated  The developer should then download and begin implementing and testing the the new language files. Once this is done, the developer should create pull requests to start merging the new language files in time for internal release", 
+            "title": "Initial File Translation ~ 2 weeks"
+        }, 
+        {
+            "location": "/i18n/introduction/#stage-2", 
+            "text": "", 
+            "title": "STAGE 2"
+        }, 
+        {
+            "location": "/i18n/introduction/#internal-release-2-weeks", 
+            "text": "If changes were made to the translation files between receiving and uploading them to staging, the developer must re-upload the modified files to the master docs Trello card so they are ready to hand off to the QA Translator  Once this is done and the new language is live on staging,  the QA Translator can begin auditing the site and updating the translation files with their changes  Ensure any changes to specific translations are consistent and updated across all other files containing the same translation     After the 2 weeks QA translator uploads their edited translation files to the Trello card and notifies the card that the new files are ready to be updated on staging", 
+            "title": "Internal Release ~ 2 weeks"
+        }, 
+        {
+            "location": "/i18n/introduction/#stage-3", 
+            "text": "", 
+            "title": "STAGE 3"
+        }, 
+        {
+            "location": "/i18n/introduction/#product-sprint-2-weeks", 
+            "text": "Once the QA has uploaded the new files to Trello, the developer should upload the new files to staging as soon as possible so that the Engineering QA\u2019s can have ample time to carry out testing", 
+            "title": "Product Sprint ~ 2 weeks"
+        }, 
+        {
+            "location": "/i18n/introduction/#critical-pages", 
+            "text": "Below is a list of the app's critical pages and the file type for translations on that page\n1. Accounts -  js \n1. Brand -  js \n1. Editor -  js   po \n1. Infographics -  js \n1. Landing Page -  po \n1. Onboarding -  js \n1. Pricing -  po \n1. Templates -  js  need to add SEO pages @Cecilien     Infograph  Assets  Homepage      x  Accounts  x    x  Brand  x    Editor  x  x    Infographics  x  x    x  x  Landing Page    x  Onboarding  x    x  x  Pricing      Static Templates    Templates  x  x", 
+            "title": "Critical Pages"
+        }, 
+        {
+            "location": "/i18n/introduction/#roles", 
+            "text": "Below is a list of roles and responsibilities for the different groups involved in the translations process  Marketer:  \n- establish contact with the Translator and \n- ensure Master Docs files are updated prior to translation handoff to Translator\n-   Translator \n- Downloads the master docs from Trello card\n- Complete translations within 2 week period   re-upload to Trello card\n- Ensures all new translations are:\n    - Consistent\n    - Similar character count to English translations  QA Translator \n- Must make an list of all translation issues   inconsistencies throughout site\n- Update the Master Docs files with changes from their list  Product \n- New translations should not drastically affect the appearance elements within the app\n    - i.e Causing a button's text to wrap to a new line or go beyond its container\n- Prior to release, ensure the following critical areas function properly with the new translations\n    - upgrade paths\n    - export\n    - business features\n-  need SEO input @Joanna  SEO \n-  need SEO input @Cecilien  Developer \n- Upload the most recent version of the translation files to Master Docs Trello card\n- Any new features need to be internationalization friendly (no inline HTML/CSS etc) \n- Moving and refactoring code needs to also make sure i18n is considered\n    - When translations are migrated over to a new repo, the translation entries should be removed from the old location's files\n- All new translation keys should follow the same conventions as        // en.js \n     presentations :   Presentation , \n     posters :   Poster , \n     reports :   Report , \n     resumes :   Resume , \n     social media :   Social ,   // Bad - Inconsistent key syntax \n     flyers :   Flyer ,    3rd party APIs must be updated to support to locale  VIP ~ Kendrick  route53 ~ Kendrick  Algolia ~ any Dev  google console ~ Kendrick or Kyu", 
+            "title": "Roles"
+        }, 
+        {
+            "location": "/i18n/introduction/#release-checklist", 
+            "text": "Product \n- Prior to, and post-release please ensure the following critical areas function properly with the new translations\n    - upgrade paths\n    - export\n    - business features\n-  need SEO input @Joanna  SEO \n- Test to make sure SEO is implemented and functions properly\n-  need SEO input @Cecilien  Product \n- [x] Test critical pages and upgrade paths\n    - Upgrade paths\n    -  Critical pages \n    - Export\n    - Business Features\n-  need SEO input @Joanna  Developer \n- Make sure all translations are rendered properly and don't adversely affect the tool's functionality\n- [x] Ensure all 3rd party APIs have been updated to support new language\n    - VIP ~ Kendrick\n    - route53 ~ Kendrick\n    - Algolia ~ any Dev\n    - google console ~ Kendrick or Kyu", 
+            "title": "Release Checklist"
+        }, 
+        {
+            "location": "/i18n/introduction/#getting-started-developers", 
             "text": "Once you have the translations for the language you are adding support for, determine where in our app the strings to be translated are stored  If they are stored in PHP files, please continue reading the  i18n with PHP  If they are stored in Javascript files, please continue reading the  i18n with Javascript", 
-            "title": "Getting Started"
+            "title": "Getting Started ~ Developers"
         }, 
         {
             "location": "/i18n/javascript/", 
