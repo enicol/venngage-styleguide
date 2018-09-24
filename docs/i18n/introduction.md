@@ -74,7 +74,7 @@ Below is a list of the app's critical pages and the file type for translations o
 |       x      |      x     |   Landing Page   |
 |       x      | Onboarding |         x        |
 |       x      |      x     |      Pricing     |
-|              |            | Static Templates |
+|       x      |      x     | Static Templates |
 |   Templates  |      x     |         x        |
 
 
