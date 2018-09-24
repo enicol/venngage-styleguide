@@ -420,8 +420,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#user-types" title="USER TYPES" class="md-nav__link">
-    USER TYPES
+  <a href="#user-types-classification-in-the-db" title="User Types Classification in the DB" class="md-nav__link">
+    User Types Classification in the DB
   </a>
   
 </li>
@@ -567,8 +567,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#user-types" title="USER TYPES" class="md-nav__link">
-    USER TYPES
+  <a href="#user-types-classification-in-the-db" title="User Types Classification in the DB" class="md-nav__link">
+    User Types Classification in the DB
   </a>
   
 </li>
@@ -683,7 +683,6 @@
               
                 
                 <h1 id="dev-support-wiki">Dev Support Wiki<a class="headerlink" href="#dev-support-wiki" title="Permanent link">&para;</a></h1>
-<p># Dev Support Wiki</p>
 <h2 id="outline"><a href="#outline">Outline</a><a class="headerlink" href="#outline" title="Permanent link">&para;</a></h2>
 <ol>
 <li><a href="#downgrades">Downgrades</a></li>
@@ -692,12 +691,38 @@
 <li><a href="#downgrade-site-license">Downgrade Site License</a></li>
 <li><a href="#restore-infographic-widgets">Restore Infographic Widgets</a></li>
 </ol>
-<h3 id="user-types">USER TYPES<a class="headerlink" href="#user-types" title="Permanent link">&para;</a></h3>
-<ol>
-<li><em>Business</em>: team_id != null</li>
-<li><em>Premium</em> || <em>Premium Guest</em> (w teamID)
-1: <em>Free</em> (and make sure team_id = NULL)</li>
-</ol>
+<h3 id="user-types-classification-in-the-db">User Types Classification in the DB<a class="headerlink" href="#user-types-classification-in-the-db" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th align="right">Type</th>
+<th align="center">Indicator</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Free</td>
+<td align="right">1</td>
+<td align="center">team_id = NULL</td>
+</tr>
+<tr>
+<td>Business</td>
+<td align="right">1</td>
+<td align="center">team_id != NULL</td>
+</tr>
+<tr>
+<td>Premium</td>
+<td align="right">2</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>Premium Guest</td>
+<td align="right">2</td>
+<td align="center">has a team_id</td>
+</tr>
+</tbody>
+</table>
 <h2 id="downgrades">Downgrades<a class="headerlink" href="#downgrades" title="Permanent link">&para;</a></h2>
 <h3 id="business-to-premium-account">Business to Premium account<a class="headerlink" href="#business-to-premium-account" title="Permanent link">&para;</a></h3>
 <hr />
@@ -801,10 +826,40 @@ UPDATE vizmvp.users SET user_type='1', team_id='8064' WHERE id='1180021';</code>
 <blockquote>
 <p>If max_members === base_members, they will not be charged for additional team members</p>
 </blockquote>
-<p><em>PREMIUM</em>                                                            <em>BUSINESS</em>
-<em> Infographic_Premium_1           $19                     Business_Plan_1         $49
-</em> Infographic_Premium_3           $49                     Business_Plan_3         $129
-* Infographic_Premium_12        $190                   Business_Plan_12       $468</p>
+<table>
+<thead>
+<tr>
+<th>Plan Name</th>
+<th align="right">Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Infographic_Premium_1</td>
+<td align="right">$19</td>
+</tr>
+<tr>
+<td>Infographic_Premium_3</td>
+<td align="right">$49</td>
+</tr>
+<tr>
+<td>Infographic_Premium_12</td>
+<td align="right">$190</td>
+</tr>
+<tr>
+<td>Business_Plan_1</td>
+<td align="right">$49</td>
+</tr>
+<tr>
+<td>Business_Plan_3</td>
+<td align="right">$129</td>
+</tr>
+<tr>
+<td>Business_Plan_12</td>
+<td align="right">$468</td>
+</tr>
+</tbody>
+</table>
 <p>Old Pricing:
 ::base_members = 2, max_members = 2, member_price = 180 (yearly), 49(quarterly), 19(monthly)::</p>
 <h3 id="refund-premium-user-downgrade-immediately">Refund premium user &amp; Downgrade immediately<a class="headerlink" href="#refund-premium-user-downgrade-immediately" title="Permanent link">&para;</a></h3>
