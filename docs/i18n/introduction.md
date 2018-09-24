@@ -4,7 +4,7 @@
 
 ---
 
-This walkthrough is intended to go over the steps needed in order to implement support for new languages within Venngage's infograph project.
+This walkthrough is intended to go over the steps needed in order to implement support for new languages within Venngage's Web App.
 
 ## [Outline](#outline)
 1. [Release Schedule](#release-schedule)
@@ -35,7 +35,9 @@ Internal Release ~ 2 weeks
 
 - If changes were made to the translation files between receiving and uploading them to staging, the developer must re-upload the modified files to the master docs Trello card so they are ready to hand off to the QA Translator
 - Once this is done and the new language is live on staging,  the QA Translator can begin auditing the site and updating the translation files with their changes
-	- Ensure any changes to specific translations are consistent and updated across all other files containing the same translation 
+	- Ensure any changes to specific translations are consistent and updated across all other files containing the same translation
+- Make sure that the sitemap has been added to the subdomain for SEO
+    - You can test this by going to  https://pt.venngage.com/sitemap.xml
 - After the 2 weeks QA translator uploads their edited translation files to the Trello card and notifies the card that the new files are ready to be updated on staging
 
 ### Stage 3
@@ -111,6 +113,7 @@ Below is a list of roles and responsibilities for the different groups involved 
 
 **SEO**
 
+- Make sure “add a sitemap” is added to the checklist of the international card
 - *need SEO input @Cecilien*
 
 **Developer**
