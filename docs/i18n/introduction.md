@@ -20,6 +20,8 @@ This walkthrough is intended to go over the steps needed in order to implement s
 
 Initial File Translation ~ 2 weeks
 
+Involves: Translator, Developer
+
 - Ensure the most recent version of master docs is uploaded to Trello card (this happens first day of new release schedule)
 - Translator downloads the up-to-date version of master docs from Trello card and begins translating them
 - Once the translator is done with the files, they should ensure that 
@@ -33,25 +35,62 @@ Initial File Translation ~ 2 weeks
 
 Internal Release ~ 2 weeks
 
-- If changes were made to the translation files between receiving and uploading them to staging, the developer must re-upload the modified files to the master docs Trello card so they are ready to hand off to the QA Translator
-- Once this is done and the new language is live on staging,  the QA Translator can begin auditing the site and updating the translation files with their changes
+Involves: QA Translator, Developer
+
+- Developer
+    - If changes were made to the translation files between receiving and uploading them to staging, the developer must re-upload the modified files to the master docs Trello card so they are ready to hand off to the QA Translator
+- QA Translator
+    - Once this is done and the new language is live on staging,  the QA Translator can begin auditing the site and updating the translation files with their changes
 	- Ensure any changes to specific translations are consistent and updated across all other files containing the same translation
-- Make sure that the sitemap has been added to the subdomain for SEO
+- Developer
+    - Make sure that the sitemap has been added to the subdomain for SEO
     - You can test this by going to  https://pt.venngage.com/sitemap.xml
-- After the 2 weeks QA translator uploads their edited translation files to the Trello card and notifies the card that the new files are ready to be updated on staging
+- QA Translator
+    - After the 2 weeks QA translator uploads their edited translation files to the Trello card and notifies the card that the new files are ready to be updated on staging
 
 ### Stage 3
 
-Product Sprint ~ 2 weeks
+Product Sprint: Infograph Fixes ~ 1 week
 
+Involves: QA Translator, Developer 1, Engineering QA
+
+- NOTE: Stage 3 should be split into 2 separate tasks within the Product Sprint, with one developer focusing on the fixes for Infograph and the other focusing on the fixes for Homepage and SEO
 - Once the QA has uploaded the new files to Trello, the developer should upload the new files to staging as soon as possible so that the Engineering QA’s can have ample time to carry out testing
 - The developer should then fix the remaining issues reported by the QAs as they would during a normal sprint process
+- Pt 1: Developer
+    - The first part of this stage focuses on fixes to these critical pages within to tool:
+        - My Designs
+        - Templates page
+        - Brand
+- Pt 2: Developer
+    - Once the fixes have been made for those pages, move on to the secondary areas of the app:
+        - Editor
+        - Account pages
+
+
+### Stage 3 continued
+
+Product Sprint Homepage & SEO ~ 1 week
+
+Involves: QA Translator, Developer 2, Engineering QA
+
+- Once the QA has uploaded the new files to Trello, another developer should upload the new files to staging as soon as possible so that the Engineering QA’s can have ample time to carry out testing
+- A second developer is needed to complete this stage of translations. Their primary focus will be on fixes for the Homepage translations and then eventually on SEO requirements and wordpress
+- Pt 1: Developer
+    - Landing Page
+    - Top navigation
+    - Pricing page
+    - Templates Page
+- Pt 2: Developer
+    - SEO Requirements
+    - Landing Page Admin
+    - Wordpress
 
 
 ## Critical Pages
 ------
 Below is a list of the app's critical pages and the file type for translations on that page
-
+- include actual file path for devs and repo
 1. Accounts - *js*
 1. Brand - *js*
 1. Editor - *js & po*
@@ -62,20 +101,19 @@ Below is a list of the app's critical pages and the file type for translations o
 1. Static Templates Page - *js*
 1. Templates - *js*
 
+| Page             | Repo            | Filename                            | File path                                                                                      |
+|------------------|-----------------|-------------------------------------|------------------------------------------------------------------------------------------------|
+| Accounts         | assets          | assets-en.js                        | js/src/translation/locales/{{locale name}}.js                                                  |
+| Brand            | assets          | assets-en.js                        | js/src/translation/locales/{{locale name}}.js                                                  |
+| Editor           | infograph       | infograph-messages.po               | locale/{{locale name}}/LC_MESSAGES/messagges.po                                                |
+| Infographics     | infograph       | infograph-en.js                     | html/app/src/translation/locales/{{locale name}}.js                                            |
+| Landing Page     | homepage        | homepage-messages.po                | locale/{{locale name}}/LC_MESSAGES/messagges.po                                                |
+| Onboarding       | assets          | assets-en.js                        | js/src/translation/locales/{{locale name}}.js                                                  |
+| Pricing          | homepage        | homepage-messages.po                | locale/{{locale name}}/LC_MESSAGES/messagges.po                                                |
+| Static Templates | assets/homepage | assets-en.js & homepage-messages.po | js/src/translation/locales/{{locale name}}.js, locale/{{locale name}}/LC_MESSAGES/messagges.po |
+| Templates        | infograph       | infograph-en.js                     | html/app/src/translation/locales/{{locale name}}.js                                            |
+
 *need to add SEO pages @Cecilien*
-
-
-|   Infograph  |   Assets   |     Homepage     |
-|:------------:|:----------:|:----------------:|
-|       x      |  Accounts  |         x        |
-|       x      |    Brand   |         x        |
-|    Editor    |      x     |         x        |
-| Infographics |      x     |         x        |
-|       x      |      x     |   Landing Page   |
-|       x      | Onboarding |         x        |
-|       x      |      x     |      Pricing     |
-|       x      |      x     | Static Templates |
-|   Templates  |      x     |         x        |
 
 
 ## Roles and Responsibilities
@@ -125,6 +163,7 @@ Below is a list of roles and responsibilities for the different groups involved 
 - All new translation keys should follow the same conventions as 
 ```js
     // en.js
+    infographic_templates: "Infographic Templates",
     presentations: "Presentation",
     posters: "Poster",
     reports: "Report",
@@ -144,6 +183,7 @@ Below is a list of roles and responsibilities for the different groups involved 
 **Marketer**
 
 - Thoroughly test new locale across all critical pages
+- test - missing translations, weird ui irregular characters
 - *need marketing input @John*
 
 **SEO**
@@ -162,17 +202,10 @@ Below is a list of roles and responsibilities for the different groups involved 
 
 **Developer**
 
-- Make sure all translations are rendered properly and don't adversely affect the tool's functionality
+- ~Make sure all translations are rendered properly and don't adversely affect the tool's functionality~
+- checking for console.log errors
 - Ensure all 3rd party APIs have been updated to support new language
     - VIP ~ Kendrick
     - route53 ~ Kendrick
 	- Algolia ~ any Dev
 	- google console ~ Kendrick or Kyu
-
-
-
-### [Getting Started ~ *Developers*](#getting-started)
-
-- Once you have the translations for the language you are adding support for, determine where in our app the strings to be translated are stored
-- If they are stored in PHP files, please continue reading the [i18n with PHP](../i18n/php)
-- If they are stored in Javascript files, please continue reading the [i18n with Javascript](../i18n/javascript)
