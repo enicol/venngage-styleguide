@@ -8,8 +8,8 @@ This walkthrough is intended to go over the steps needed in order to implement s
 
 ## [Outline](#outline)
 1. [Release Schedule](#release-schedule)
-1. [Critical Pages](#critical-pages)
 1. [Roles and Responsibilities](#roles-and-responsibilities)
+1. [Critical Pages](#critical-pages)
 1. [Release Checklist](#release-checklist)
 
 
@@ -44,27 +44,28 @@ This walkthrough is intended to go over the steps needed in order to implement s
 - QA Translator
     - After the 2 weeks QA translator uploads their edited translation files to the Trello card and notifies the card that the new files are ready to be updated on staging
 
-### Stage 3: Product Sprint
+### Stage 3: Product Sprint Part 1
 
-#### Infograph Fixes ~ 1 week
+#### Infograph ~ 1 week
 
 **QA Translator, Developer 1, Engineering QA** 
 
 - **NOTE:** Stage 3 should be split into 2 separate tasks within the Product Sprint, with one developer focusing on the fixes for Infograph and the other focusing on the fixes for Homepage and SEO
 - Developer
     - Once the QA has uploaded the new files to Trello, the developer should upload the new files to staging as soon as possible so that the Engineering QA’s can have ample time to carry out testing
-- **Pt 1:** Developer
-    - The first part of this stage focuses on fixes to these critical pages within to tool:
-        - My Designs
-        - Templates page
-        - Brand
-- **Pt 2:** Developer
-    - Once the fixes have been made for those pages, move on to the secondary areas of the app:
-        - Editor
-        - Account pages
+- Developer
+    - **Pt 1:**
+        - The first part of this stage focuses on fixes to these critical pages within to tool:
+            - My Designs
+            - Templates page
+            - Brand
+    - **Pt 2:**
+        - After fixing those pages, move on to the secondary areas of the app:
+            - Editor
+            - Account pages
 
 
-### Stage 3: Product Sprint continued
+### Stage 3: Product Sprint Part 2
 
 #### Homepage & SEO ~ 1 week
 
@@ -73,35 +74,16 @@ This walkthrough is intended to go over the steps needed in order to implement s
 - Developer
     - Once the QA has uploaded the new files to Trello, another developer should upload the new files to staging as soon as possible so that the Engineering QA’s can have ample time to carry out testing
 - A second developer is needed to complete this stage of translations. Their primary focus will be on fixes for the Homepage translations and then eventually on SEO requirements and wordpress
-- **Pt 1:** Developer
-    - Landing Page
-    - Top navigation
-    - Pricing page
-    - Templates Page
-- **Pt 2:** Developer
-    - SEO Requirements
-    - Landing Page Admin
-    - Wordpress
-
-
-## Critical Pages
-------
-Below is a table of the app's critical pages and the file type for translations on that page
-
-
-| Page             | Repo            | Filename                            | File path                                                                                      |
-|------------------|-----------------|-------------------------------------|------------------------------------------------------------------------------------------------|
-| Accounts         | assets          | assets-en.js                        | js/src/translation/locales/{{locale name}}.js                                                  |
-| Brand            | assets          | assets-en.js                        | js/src/translation/locales/{{locale name}}.js                                                  |
-| Editor           | infograph       | infograph-messages.po               | locale/{{locale_name}}/LC_MESSAGES/messages.po                                                  |
-| Infographics     | infograph       | infograph-en.js                     | html/app/src/translation/locales/{{locale name}}.js                                            |
-| Landing Page     | homepage        | homepage-messages.po                | locale/{{locale_name}}/LC_MESSAGES/messages.po                                               |
-| Onboarding       | assets          | assets-en.js                        | js/src/translation/locales/{{locale name}}.js                                                  |
-| Pricing          | homepage        | homepage-messages.po                | locale/{{locale_name}}/LC_MESSAGES/messages.po                                                 |
-| Static Templates | assets & homepage | assets-en.js & homepage-messages.po | js/src/translation/locales/{{locale name}}.js, locale/{{locale_name}}/LC_MESSAGES/messages.po |
-| Templates        | infograph       | infograph-en.js                     | html/app/src/translation/locales/{{locale_name}}.js                                           |
-
-*need to add SEO pages @Cecilien*
+- Developer
+    - **Pt 1:**
+        - Landing Page
+        - Top navigation
+        - Pricing page
+        - Templates Page
+    - **Pt 2:**
+        - SEO Requirements
+        - Landing Page Admin
+        - Wordpress
 
 
 ## Roles and Responsibilities
@@ -116,11 +98,13 @@ Below is a list of roles and responsibilities for the different groups involved 
 
 **Translator**
 
+- **IMPORTANT** all new translations must
+    - Be NO more than 20% longer than the original english translation
+    - Consistent across files
+    - Make sure the files are saved with `utf-8` encoding
 - Downloads the master docs from Trello card
 - Complete translations within 2 week period & re-upload to Trello card
-- Ensures all new translations are:
-	- Consistent
-	- Similar character count to English translations
+
 
 **QA Translator**
 
@@ -164,6 +148,29 @@ Below is a list of roles and responsibilities for the different groups involved 
     - route53 ~ Kendrick
 	- Algolia ~ any Dev
 	- google console ~ Kendrick or Kyu
+
+
+
+## Critical Pages
+------
+Below is a table of the app's critical pages and the file type for translations on that page
+
+
+| Page             | Repo            | Filename                            | File path                                                                                      |
+|------------------|-----------------|-------------------------------------|------------------------------------------------------------------------------------------------|
+| Accounts         | assets          | assets-en.js                        | js/src/translation/locales/{{locale name}}.js                                                  |
+| Brand            | assets          | assets-en.js                        | js/src/translation/locales/{{locale name}}.js                                                  |
+| Editor           | infograph       | infograph-messages.po               | locale/{{locale_name}}/LC_MESSAGES/messages.po                                                  |
+| Infographics     | infograph       | infograph-en.js                     | html/app/src/translation/locales/{{locale name}}.js                                            |
+| Landing Page     | homepage        | homepage-messages.po                | locale/{{locale_name}}/LC_MESSAGES/messages.po                                               |
+| Onboarding       | assets          | assets-en.js                        | js/src/translation/locales/{{locale name}}.js                                                  |
+| Pricing          | homepage        | homepage-messages.po                | locale/{{locale_name}}/LC_MESSAGES/messages.po                                                 |
+| Static Templates | assets & homepage | assets-en.js & homepage-messages.po | js/src/translation/locales/{{locale name}}.js, locale/{{locale_name}}/LC_MESSAGES/messages.po |
+| Templates        | infograph       | infograph-en.js                     | html/app/src/translation/locales/{{locale_name}}.js                                           |
+
+*need to add SEO pages @Cecilien*
+
+
 
 ## Release Checklist
 ------
