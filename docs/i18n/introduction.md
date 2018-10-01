@@ -98,7 +98,7 @@ Below is a table of the app's critical pages and the file type for translations 
 | Landing Page     | homepage        | homepage-messages.po                | locale/{{locale_name}}/LC_MESSAGES/messages.po                                               |
 | Onboarding       | assets          | assets-en.js                        | js/src/translation/locales/{{locale name}}.js                                                  |
 | Pricing          | homepage        | homepage-messages.po                | locale/{{locale_name}}/LC_MESSAGES/messages.po                                                 |
-| Static Templates | assets/homepage | assets-en.js & homepage-messages.po | js/src/translation/locales/{{locale name}}.js, locale/{{locale_name}}/LC_MESSAGES/messages.po |
+| Static Templates | assets & homepage | assets-en.js & homepage-messages.po | js/src/translation/locales/{{locale name}}.js, locale/{{locale_name}}/LC_MESSAGES/messages.po |
 | Templates        | infograph       | infograph-en.js                     | html/app/src/translation/locales/{{locale_name}}.js                                           |
 
 *need to add SEO pages @Cecilien*
