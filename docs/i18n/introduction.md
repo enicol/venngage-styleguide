@@ -54,15 +54,15 @@ Product Sprint: Infograph Fixes ~ 1 week
 
 Involves: QA Translator, Developer 1, Engineering QA
 
-- NOTE: Stage 3 should be split into 2 separate tasks within the Product Sprint, with one developer focusing on the fixes for Infograph and the other focusing on the fixes for Homepage and SEO
+- **NOTE:** Stage 3 should be split into 2 separate tasks within the Product Sprint, with one developer focusing on the fixes for Infograph and the other focusing on the fixes for Homepage and SEO
 - Once the QA has uploaded the new files to Trello, the developer should upload the new files to staging as soon as possible so that the Engineering QA’s can have ample time to carry out testing
 - The developer should then fix the remaining issues reported by the QAs as they would during a normal sprint process
-- Pt 1: Developer
+- **Pt 1:** Developer
     - The first part of this stage focuses on fixes to these critical pages within to tool:
         - My Designs
         - Templates page
         - Brand
-- Pt 2: Developer
+- **Pt 2:** Developer
     - Once the fixes have been made for those pages, move on to the secondary areas of the app:
         - Editor
         - Account pages
@@ -76,12 +76,12 @@ Involves: QA Translator, Developer 2, Engineering QA
 
 - Once the QA has uploaded the new files to Trello, another developer should upload the new files to staging as soon as possible so that the Engineering QA’s can have ample time to carry out testing
 - A second developer is needed to complete this stage of translations. Their primary focus will be on fixes for the Homepage translations and then eventually on SEO requirements and wordpress
-- Pt 1: Developer
+- **Pt 1:** Developer
     - Landing Page
     - Top navigation
     - Pricing page
     - Templates Page
-- Pt 2: Developer
+- **Pt 2:** Developer
     - SEO Requirements
     - Landing Page Admin
     - Wordpress
@@ -90,16 +90,25 @@ Involves: QA Translator, Developer 2, Engineering QA
 ## Critical Pages
 ------
 Below is a list of the app's critical pages and the file type for translations on that page
-- include actual file path for devs and repo
+
 1. Accounts - *js*
+
 1. Brand - *js*
+
 1. Editor - *js & po*
+
 1. Infographics - *js*
+
 1. Landing Page - *po*
+
 1. Onboarding - *js*
+
 1. Pricing - *po*
+
 1. Static Templates Page - *js*
+
 1. Templates - *js*
+
 
 | Page             | Repo            | Filename                            | File path                                                                                      |
 |------------------|-----------------|-------------------------------------|------------------------------------------------------------------------------------------------|
