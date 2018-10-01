@@ -16,11 +16,9 @@ This walkthrough is intended to go over the steps needed in order to implement s
 ## Release Schedule
 ---
 
-### Stage 1
+### Stage 1: Initial File Translation
 
-#### Initial File Translation ~ 2 weeks
-
-Involves: Translator, Developer
+**Translator, Developer** ~ 2 weeks
 
 - Ensure the most recent version of master docs is uploaded to Trello card (this happens first day of new release schedule)
 - Translator downloads the up-to-date version of master docs from Trello card and begins translating them
@@ -31,11 +29,9 @@ Involves: Translator, Developer
 - The developer should then download and begin implementing and testing the the new language files. Once this is done, the developer should create pull requests to start merging the new language files in time for internal release
 
 
-### Stage 2
+### Stage 2: Internal Release
 
-#### Internal Release ~ 2 weeks
-
-**QA Translator, Developer**
+**QA Translator, Developer** ~ 2 weeks
 
 - Developer
     - If changes were made to the translation files between receiving and uploading them to staging, the developer must re-upload the modified files to the master docs Trello card so they are ready to hand off to the QA Translator
@@ -48,11 +44,11 @@ Involves: Translator, Developer
 - QA Translator
     - After the 2 weeks QA translator uploads their edited translation files to the Trello card and notifies the card that the new files are ready to be updated on staging
 
-### Stage 3
+### Stage 3: Product Sprint
 
-#### Product Sprint: Infograph Fixes ~ 1 week
+#### Infograph Fixes ~ 1 week
 
-**QA Translator, Developer 1, Engineering QA**
+**QA Translator, Developer 1, Engineering QA** 
 
 - **NOTE:** Stage 3 should be split into 2 separate tasks within the Product Sprint, with one developer focusing on the fixes for Infograph and the other focusing on the fixes for Homepage and SEO
 - Developer
@@ -68,9 +64,9 @@ Involves: Translator, Developer
         - Account pages
 
 
-### Stage 3 continued
+### Stage 3: Product Sprint continued
 
-#### Product Sprint Homepage & SEO ~ 1 week
+#### Homepage & SEO ~ 1 week
 
 **QA Translator, Developer 2, Engineering QA**
 
@@ -115,12 +111,12 @@ Below is a list of the app's critical pages and the file type for translations o
 |------------------|-----------------|-------------------------------------|------------------------------------------------------------------------------------------------|
 | Accounts         | assets          | assets-en.js                        | js/src/translation/locales/{{locale name}}.js                                                  |
 | Brand            | assets          | assets-en.js                        | js/src/translation/locales/{{locale name}}.js                                                  |
-| Editor           | infograph       | infograph-messages.po               | locale/{{locale name}}/LC_MESSAGES/messagges.po                                                |
+| Editor           | infograph       | infograph-messages.po               | `locale/{{locale name}}/LC_MESSAGES/messages.po`                                                  |
 | Infographics     | infograph       | infograph-en.js                     | html/app/src/translation/locales/{{locale name}}.js                                            |
-| Landing Page     | homepage        | homepage-messages.po                | locale/{{locale name}}/LC_MESSAGES/messagges.po                                                |
+| Landing Page     | homepage        | homepage-messages.po                | `locale/{{locale name}}/LC_MESSAGES/messages.po`                                              |
 | Onboarding       | assets          | assets-en.js                        | js/src/translation/locales/{{locale name}}.js                                                  |
-| Pricing          | homepage        | homepage-messages.po                | locale/{{locale name}}/LC_MESSAGES/messagges.po                                                |
-| Static Templates | assets/homepage | assets-en.js & homepage-messages.po | js/src/translation/locales/{{locale name}}.js, locale/{{locale name}}/LC_MESSAGES/messagges.po |
+| Pricing          | homepage        | homepage-messages.po                | `locale/{{locale name}}/LC_MESSAGES/messages.po`                                                |
+| Static Templates | assets/homepage | assets-en.js & homepage-messages.po | `js/src/translation/locales/{{locale name}}.js`, `locale/{{locale name}}/LC_MESSAGES/messages.po` |
 | Templates        | infograph       | infograph-en.js                     | html/app/src/translation/locales/{{locale name}}.js                                            |
 
 *need to add SEO pages @Cecilien*
@@ -212,7 +208,7 @@ Below is a list of roles and responsibilities for the different groups involved 
 
 **Developer**
 
-- checking for console.log errors
+- Check browser console and make sure there are no console.log errors
 - Ensure all 3rd party APIs have been updated to support new language
     - VIP ~ Kendrick
     - route53 ~ Kendrick
