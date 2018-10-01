@@ -99,7 +99,7 @@ Below is a list of roles and responsibilities for the different groups involved 
 **Translator**
 
 - **IMPORTANT** all new translations must
-    - Be NO more than 20% longer than the original english translation
+    - Be equal length or **NO** more than 20% longer than original english translation
     - Consistent across files
     - Make sure the files are saved with `utf-8` encoding
 - Downloads the master docs from Trello card
