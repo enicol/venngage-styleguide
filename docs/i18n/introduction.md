@@ -18,7 +18,7 @@ This walkthrough is intended to go over the steps needed in order to implement s
 
 ### Stage 1
 
-Initial File Translation ~ 2 weeks
+#### Initial File Translation ~ 2 weeks
 
 Involves: Translator, Developer
 
@@ -33,9 +33,9 @@ Involves: Translator, Developer
 
 ### Stage 2
 
-Internal Release ~ 2 weeks
+#### Internal Release ~ 2 weeks
 
-Involves: QA Translator, Developer
+**QA Translator, Developer**
 
 - Developer
     - If changes were made to the translation files between receiving and uploading them to staging, the developer must re-upload the modified files to the master docs Trello card so they are ready to hand off to the QA Translator
@@ -50,13 +50,13 @@ Involves: QA Translator, Developer
 
 ### Stage 3
 
-Product Sprint: Infograph Fixes ~ 1 week
+#### Product Sprint: Infograph Fixes ~ 1 week
 
-Involves: QA Translator, Developer 1, Engineering QA
+**QA Translator, Developer 1, Engineering QA**
 
 - **NOTE:** Stage 3 should be split into 2 separate tasks within the Product Sprint, with one developer focusing on the fixes for Infograph and the other focusing on the fixes for Homepage and SEO
-- Once the QA has uploaded the new files to Trello, the developer should upload the new files to staging as soon as possible so that the Engineering QA’s can have ample time to carry out testing
-- The developer should then fix the remaining issues reported by the QAs as they would during a normal sprint process
+- Developer
+    - Once the QA has uploaded the new files to Trello, the developer should upload the new files to staging as soon as possible so that the Engineering QA’s can have ample time to carry out testing
 - **Pt 1:** Developer
     - The first part of this stage focuses on fixes to these critical pages within to tool:
         - My Designs
@@ -70,11 +70,12 @@ Involves: QA Translator, Developer 1, Engineering QA
 
 ### Stage 3 continued
 
-Product Sprint Homepage & SEO ~ 1 week
+#### Product Sprint Homepage & SEO ~ 1 week
 
-Involves: QA Translator, Developer 2, Engineering QA
+**QA Translator, Developer 2, Engineering QA**
 
-- Once the QA has uploaded the new files to Trello, another developer should upload the new files to staging as soon as possible so that the Engineering QA’s can have ample time to carry out testing
+- Developer
+    - Once the QA has uploaded the new files to Trello, another developer should upload the new files to staging as soon as possible so that the Engineering QA’s can have ample time to carry out testing
 - A second developer is needed to complete this stage of translations. Their primary focus will be on fixes for the Homepage translations and then eventually on SEO requirements and wordpress
 - **Pt 1:** Developer
     - Landing Page
@@ -211,7 +212,6 @@ Below is a list of roles and responsibilities for the different groups involved 
 
 **Developer**
 
-- ~Make sure all translations are rendered properly and don't adversely affect the tool's functionality~
 - checking for console.log errors
 - Ensure all 3rd party APIs have been updated to support new language
     - VIP ~ Kendrick
