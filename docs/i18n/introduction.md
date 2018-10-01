@@ -86,25 +86,7 @@ This walkthrough is intended to go over the steps needed in order to implement s
 
 ## Critical Pages
 ------
-Below is a list of the app's critical pages and the file type for translations on that page
-
-1. Accounts - *js*
-
-1. Brand - *js*
-
-1. Editor - *js & po*
-
-1. Infographics - *js*
-
-1. Landing Page - *po*
-
-1. Onboarding - *js*
-
-1. Pricing - *po*
-
-1. Static Templates Page - *js*
-
-1. Templates - *js*
+Below is a table of the app's critical pages and the file type for translations on that page
 
 
 | Page             | Repo            | Filename                            | File path                                                                                      |
