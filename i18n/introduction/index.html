@@ -279,6 +279,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#stage-3-continued" title="Stage 3 continued" class="md-nav__link">
+    Stage 3 continued
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -302,19 +309,6 @@
   <a href="#release-checklist" title="Release Checklist" class="md-nav__link">
     Release Checklist
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#getting-started-developers" title="Getting Started ~ Developers" class="md-nav__link">
-    Getting Started ~ Developers
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -578,6 +572,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#stage-3-continued" title="Stage 3 continued" class="md-nav__link">
+    Stage 3 continued
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -601,19 +602,6 @@
   <a href="#release-checklist" title="Release Checklist" class="md-nav__link">
     Release Checklist
   </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#getting-started-developers" title="Getting Started ~ Developers" class="md-nav__link">
-    Getting Started ~ Developers
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -647,6 +635,7 @@
 <hr />
 <h3 id="stage-1">Stage 1<a class="headerlink" href="#stage-1" title="Permanent link">&para;</a></h3>
 <p>Initial File Translation ~ 2 weeks</p>
+<p>Involves: Translator, Developer</p>
 <ul>
 <li>Ensure the most recent version of master docs is uploaded to Trello card (this happens first day of new release schedule)</li>
 <li>Translator downloads the up-to-date version of master docs from Trello card and begins translating them</li>
@@ -660,95 +649,152 @@
 </ul>
 <h3 id="stage-2">Stage 2<a class="headerlink" href="#stage-2" title="Permanent link">&para;</a></h3>
 <p>Internal Release ~ 2 weeks</p>
+<p>Involves: QA Translator, Developer</p>
 <ul>
+<li>Developer<ul>
 <li>If changes were made to the translation files between receiving and uploading them to staging, the developer must re-upload the modified files to the master docs Trello card so they are ready to hand off to the QA Translator</li>
-<li>Once this is done and the new language is live on staging,  the QA Translator can begin auditing the site and updating the translation files with their changes<ul>
+</ul>
+</li>
+<li>QA Translator<ul>
+<li>Once this is done and the new language is live on staging,  the QA Translator can begin auditing the site and updating the translation files with their changes</li>
 <li>Ensure any changes to specific translations are consistent and updated across all other files containing the same translation</li>
 </ul>
 </li>
-<li>Make sure that the sitemap has been added to the subdomain for SEO<ul>
+<li>Developer<ul>
+<li>Make sure that the sitemap has been added to the subdomain for SEO</li>
 <li>You can test this by going to  https://pt.venngage.com/sitemap.xml</li>
 </ul>
 </li>
+<li>QA Translator<ul>
 <li>After the 2 weeks QA translator uploads their edited translation files to the Trello card and notifies the card that the new files are ready to be updated on staging</li>
 </ul>
+</li>
+</ul>
 <h3 id="stage-3">Stage 3<a class="headerlink" href="#stage-3" title="Permanent link">&para;</a></h3>
-<p>Product Sprint ~ 2 weeks</p>
+<p>Product Sprint: Infograph Fixes ~ 1 week</p>
+<p>Involves: QA Translator, Developer 1, Engineering QA</p>
 <ul>
+<li>NOTE: Stage 3 should be split into 2 separate tasks within the Product Sprint, with one developer focusing on the fixes for Infograph and the other focusing on the fixes for Homepage and SEO</li>
 <li>Once the QA has uploaded the new files to Trello, the developer should upload the new files to staging as soon as possible so that the Engineering QA’s can have ample time to carry out testing</li>
 <li>The developer should then fix the remaining issues reported by the QAs as they would during a normal sprint process</li>
+<li>Pt 1: Developer<ul>
+<li>The first part of this stage focuses on fixes to these critical pages within to tool:<ul>
+<li>My Designs</li>
+<li>Templates page</li>
+<li>Brand</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Pt 2: Developer<ul>
+<li>Once the fixes have been made for those pages, move on to the secondary areas of the app:<ul>
+<li>Editor</li>
+<li>Account pages</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="stage-3-continued">Stage 3 continued<a class="headerlink" href="#stage-3-continued" title="Permanent link">&para;</a></h3>
+<p>Product Sprint Homepage &amp; SEO ~ 1 week</p>
+<p>Involves: QA Translator, Developer 2, Engineering QA</p>
+<ul>
+<li>Once the QA has uploaded the new files to Trello, another developer should upload the new files to staging as soon as possible so that the Engineering QA’s can have ample time to carry out testing</li>
+<li>A second developer is needed to complete this stage of translations. Their primary focus will be on fixes for the Homepage translations and then eventually on SEO requirements and wordpress</li>
+<li>Pt 1: Developer<ul>
+<li>Landing Page</li>
+<li>Top navigation</li>
+<li>Pricing page</li>
+<li>Templates Page</li>
+</ul>
+</li>
+<li>Pt 2: Developer<ul>
+<li>SEO Requirements</li>
+<li>Landing Page Admin</li>
+<li>Wordpress</li>
+</ul>
+</li>
 </ul>
 <h2 id="critical-pages">Critical Pages<a class="headerlink" href="#critical-pages" title="Permanent link">&para;</a></h2>
 <hr />
-<p>Below is a list of the app's critical pages and the file type for translations on that page</p>
-<ol>
-<li>Accounts - <em>js</em></li>
-<li>Brand - <em>js</em></li>
-<li>Editor - <em>js &amp; po</em></li>
-<li>Infographics - <em>js</em></li>
-<li>Landing Page - <em>po</em></li>
-<li>Onboarding - <em>js</em></li>
-<li>Pricing - <em>po</em></li>
-<li>Static Templates Page - <em>js</em></li>
-<li>Templates - <em>js</em></li>
-</ol>
-<p><em>need to add SEO pages @Cecilien</em></p>
+<p>Below is a list of the app's critical pages and the file type for translations on that page
+- include actual file path for devs and repo
+1. Accounts - <em>js</em>
+1. Brand - <em>js</em>
+1. Editor - <em>js &amp; po</em>
+1. Infographics - <em>js</em>
+1. Landing Page - <em>po</em>
+1. Onboarding - <em>js</em>
+1. Pricing - <em>po</em>
+1. Static Templates Page - <em>js</em>
+1. Templates - <em>js</em></p>
 <table>
 <thead>
 <tr>
-<th align="center">Infograph</th>
-<th align="center">Assets</th>
-<th align="center">Homepage</th>
+<th>Page</th>
+<th>Repo</th>
+<th>Filename</th>
+<th>File path</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">x</td>
-<td align="center">Accounts</td>
-<td align="center">x</td>
+<td>Accounts</td>
+<td>assets</td>
+<td>assets-en.js</td>
+<td>js/src/translation/locales/{{locale name}}.js</td>
 </tr>
 <tr>
-<td align="center">x</td>
-<td align="center">Brand</td>
-<td align="center">x</td>
+<td>Brand</td>
+<td>assets</td>
+<td>assets-en.js</td>
+<td>js/src/translation/locales/{{locale name}}.js</td>
 </tr>
 <tr>
-<td align="center">Editor</td>
-<td align="center">x</td>
-<td align="center">x</td>
+<td>Editor</td>
+<td>infograph</td>
+<td>infograph-messages.po</td>
+<td>locale/{{locale name}}/LC_MESSAGES/messagges.po</td>
 </tr>
 <tr>
-<td align="center">Infographics</td>
-<td align="center">x</td>
-<td align="center">x</td>
+<td>Infographics</td>
+<td>infograph</td>
+<td>infograph-en.js</td>
+<td>html/app/src/translation/locales/{{locale name}}.js</td>
 </tr>
 <tr>
-<td align="center">x</td>
-<td align="center">x</td>
-<td align="center">Landing Page</td>
+<td>Landing Page</td>
+<td>homepage</td>
+<td>homepage-messages.po</td>
+<td>locale/{{locale name}}/LC_MESSAGES/messagges.po</td>
 </tr>
 <tr>
-<td align="center">x</td>
-<td align="center">Onboarding</td>
-<td align="center">x</td>
+<td>Onboarding</td>
+<td>assets</td>
+<td>assets-en.js</td>
+<td>js/src/translation/locales/{{locale name}}.js</td>
 </tr>
 <tr>
-<td align="center">x</td>
-<td align="center">x</td>
-<td align="center">Pricing</td>
+<td>Pricing</td>
+<td>homepage</td>
+<td>homepage-messages.po</td>
+<td>locale/{{locale name}}/LC_MESSAGES/messagges.po</td>
 </tr>
 <tr>
-<td align="center">x</td>
-<td align="center">x</td>
-<td align="center">Static Templates</td>
+<td>Static Templates</td>
+<td>assets/homepage</td>
+<td>assets-en.js &amp; homepage-messages.po</td>
+<td>js/src/translation/locales/{{locale name}}.js, locale/{{locale name}}/LC_MESSAGES/messagges.po</td>
 </tr>
 <tr>
-<td align="center">Templates</td>
-<td align="center">x</td>
-<td align="center">x</td>
+<td>Templates</td>
+<td>infograph</td>
+<td>infograph-en.js</td>
+<td>html/app/src/translation/locales/{{locale name}}.js</td>
 </tr>
 </tbody>
 </table>
+<p><em>need to add SEO pages @Cecilien</em></p>
 <h2 id="roles-and-responsibilities">Roles and Responsibilities<a class="headerlink" href="#roles-and-responsibilities" title="Permanent link">&para;</a></h2>
 <hr />
 <p>Below is a list of roles and responsibilities for the different groups involved in the translations process</p>
@@ -803,6 +849,7 @@
 <li>All new translation keys should follow the same conventions as </li>
 </ul>
 <div class="codehilite"><pre><span></span>    <span class="c1">// en.js</span>
+    <span class="nx">infographic_templates</span><span class="o">:</span> <span class="s2">&quot;Infographic Templates&quot;</span><span class="p">,</span>
     <span class="nx">presentations</span><span class="o">:</span> <span class="s2">&quot;Presentation&quot;</span><span class="p">,</span>
     <span class="nx">posters</span><span class="o">:</span> <span class="s2">&quot;Poster&quot;</span><span class="p">,</span>
     <span class="nx">reports</span><span class="o">:</span> <span class="s2">&quot;Report&quot;</span><span class="p">,</span>
@@ -826,6 +873,7 @@
 <p><strong>Marketer</strong></p>
 <ul>
 <li>Thoroughly test new locale across all critical pages</li>
+<li>test - missing translations, weird ui irregular characters</li>
 <li><em>need marketing input @John</em></li>
 </ul>
 <p><strong>SEO</strong></p>
@@ -846,7 +894,8 @@
 </ul>
 <p><strong>Developer</strong></p>
 <ul>
-<li>Make sure all translations are rendered properly and don't adversely affect the tool's functionality</li>
+<li>~Make sure all translations are rendered properly and don't adversely affect the tool's functionality~</li>
+<li>checking for console.log errors</li>
 <li>Ensure all 3rd party APIs have been updated to support new language<ul>
 <li>VIP ~ Kendrick</li>
 <li>route53 ~ Kendrick</li>
@@ -854,12 +903,6 @@
 <li>google console ~ Kendrick or Kyu</li>
 </ul>
 </li>
-</ul>
-<h3 id="getting-started-developers"><a href="#getting-started">Getting Started ~ <em>Developers</em></a><a class="headerlink" href="#getting-started-developers" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Once you have the translations for the language you are adding support for, determine where in our app the strings to be translated are stored</li>
-<li>If they are stored in PHP files, please continue reading the <a href="../../i18n/php">i18n with PHP</a></li>
-<li>If they are stored in Javascript files, please continue reading the <a href="../../i18n/javascript">i18n with Javascript</a></li>
 </ul>
               
             </article>
