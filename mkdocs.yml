@@ -29,6 +29,8 @@ theme:
 # Options
 extra:
   language: en
+  search:
+    tokenizer: '[\s\-\.]+'
   social:
     - type: 'github'
       link: 'https://github.com/Venngage'
@@ -45,11 +47,13 @@ google_analytics:
 # Extensions
 markdown_extensions:
   - admonition
-  - codehilite(guess_lang=false)
+  - codehilite:
+      guess_lang: false
   - footnotes
   - meta
-  - toc(permalink=true)
   - pymdownx.critic
+  - toc:
+      permalink: true
 
 # Documentation structure
 nav:
