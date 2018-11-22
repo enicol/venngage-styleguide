@@ -65,7 +65,6 @@ nav:
 -  Javascript:
     - 'Basic Coding Standard': 'js/javascript.md'
     - 'React Styleguide': 'js/react.md'
-    # - 'CSS in Javascript': 'js/css-js.md'
 -  PHP:
     - 'Basic Coding Standard': 'php/php-standard.md'
     - 'Coding Styleguide': 'php/php-styleguide.md'
