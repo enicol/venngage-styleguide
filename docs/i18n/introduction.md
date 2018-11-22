@@ -50,7 +50,7 @@ This term is used in some parts of the documentation and refers to the language 
 
 ## Release Schedule
 
-> ![zoomify](images/i18n-release-schedule.png){.center .small}
+> ![zoomify](./images/i18n-release-schedule.png){.center .small}
 
 ## Stage 1: Initial File Translation
 
