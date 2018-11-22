@@ -15,9 +15,6 @@ copyright: 'Copyright &copy; 2018 Venngage'
 # Documentation and theme
 theme:
   name: 'material'
-
-# Options
-extra:
   logo: 'images/venngage-logo.svg'
   palette:
     primary: 'indigo'
@@ -25,10 +22,13 @@ extra:
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
-  language: en
+  favicon: 'images/favicon.ico'
   feature:
     tabs: true
-  favicon: 'images/favicon.ico'
+
+# Options
+extra:
+  language: en
   social:
     - type: 'github'
       link: 'https://github.com/Venngage'
@@ -52,7 +52,7 @@ markdown_extensions:
   - pymdownx.critic
 
 # Documentation structure
-pages:
+nav:
 -  Home: 'index.md'
 -  Internationalization:
     - 'Introduction': 'i18n/introduction.md'

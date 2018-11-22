@@ -45,11 +45,12 @@ login: {
 As you can see in both examples, the master docs are organized as a list of key value pairs. Where the `msgid` is the *key* in `.po` files, and `msgstr` is the *value* to be translated by the *Translator*. In the `.js` files the word to the left of the colon is the *key*, and everything to the right of the colon in quotes `""` is the *value* 
 
 
-### locale_name:
-This term is used in some parts of the documentation and refers to the language or locale you are adding support for. Specifically it is a shorthand reference for that language. If we were to add support for Italian, the locale_name for it would be `it`, and for Hungarian is would be `hu`.
+### locale name:
+This term is used in some parts of the documentation and refers to the language or locale you are adding support for. Specifically it is a shorthand reference for that language. If we were to add support for Italian, the locale name for it would be `it`, and for Hungarian is would be `hu`.
 
 ## Release Schedule
 
+> ![zoomify](images/i18n-release-schedule.png){.center .small}
 
 ## Stage 1: Initial File Translation
 
