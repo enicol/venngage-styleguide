@@ -8,7 +8,7 @@
     1. [i18n with PHP](i18n/php)
 2. [Javascript Styleguide](js/javascript)
     1. [React](js/react)
-    1. [CSS in Javascript](js/css-js)
+    <!-- 1. [CSS in Javascript](js/css-js) -->
 
 3. [PHP Coding Standards](php/php-standard)
     1. [Styleguide](php/php-styleguide)
