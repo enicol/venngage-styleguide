@@ -1,6 +1,5 @@
 # Venngage Developer Documentation
 
------
 
 1. [Internationalization](/i18n/introduction)
     1. [Process Overview](i18n/introduction)
